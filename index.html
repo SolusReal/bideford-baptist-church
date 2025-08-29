@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bideford Baptist Church</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;display:flex;flex-direction:row;height:100vh;background:#f7f9fc;color:#333;overflow:hidden;}
+/* Sidebar */
+.sidebar{
+  width:280px;
+  background-color:#1e293b;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+.sidebar-header{
+  padding:25px 20px 10px 20px;
+  flex-shrink:0;
+}
+.sidebar-header h2{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:15px;
+  text-align:center;
+}
+.search-box{
+  display:flex;
+  align-items:center;
+  background:#2e3b4f;
+  border-radius:10px;
+  padding:8px 12px;
+  margin-bottom:15px;
+}
+.search-box i{color:#a0aec0;}
+.search-box input{
+  border:none;
+  background:transparent;
+  color:#fff;
+  margin-left:10px;
+  width:100%;
+  outline:none;
+  font-size:14px;
+}
+.sidebar-links{
+  flex:1;
+  overflow-y:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding-bottom:20px;
+}
+.sidebar-links::-webkit-scrollbar{display:none;}
+.sidebar a{
+  display:flex;
+  align-items:center;
+  padding:12px 15px;
+  margin-bottom:8px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  transition:all 0.3s;
+}
+.sidebar a i{margin-right:10px;width:20px;text-align:center;}
+.sidebar a:hover,.sidebar a.active{
+  background:#3a4b63;
+  transform:translateX(5px);
+}
+.sidebar .dropdown{flex-direction:column;position:relative;}
+.sidebar .dropdown-content{
+  display:flex;
+  flex-direction:column;
+  margin-left:20px;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height 0.5s ease,opacity 0.5s ease;
+}
+.sidebar .dropdown.active .dropdown-content{
+  max-height:500px;
+  opacity:1;
+}
+.sidebar .dropdown-content a{
+  margin-bottom:5px;
+  font-size:14px;
+  padding:8px 12px;
+  border-radius:5px;
+  color:#fff;
+}
+.sidebar .dropdown-content a:hover{background:#475569;cursor:pointer;}
+
+/* Contact at bottom fixed */
+.sidebar-contact-wrapper{
+  flex-shrink:0;
+  width:100%;
+  position:sticky;
+  bottom:0;
+  z-index:2;
+  overflow:hidden;
+}
+.sidebar-contact{
+  background:#1e293b;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 15px;
+  font-weight:500;
+  cursor:pointer;
+  border-top:1px solid #475569;
+  width:100%;
+}
+
+/* Main Content */
+.main{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.main h1{font-size:36px;font-weight:700;margin-bottom:15px;}
+.main p{font-size:18px;line-height:1.7;margin-bottom:30px;}
+.main img{display:block;margin:30px auto 0 auto;max-width:80%;border-radius:10px;}
+
+/* Calendar */
+.calendar-controls{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin-bottom:15px;
+}
+.calendar-controls button{
+  padding:5px 10px;
+  border:none;
+  border-radius:5px;
+  background:#1e40af;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+.calendar-month{
+  font-size:22px;
+  font-weight:600;
+  text-align:center;
+  margin-bottom:10px;
+  flex-grow:1;
+}
+.calendar-search{
+  margin-bottom:20px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.calendar-search input[type="text"]{
+  padding:8px 10px;
+  border-radius:5px;
+  border:1px solid #ccc;
+  width:130px;
+}
+.calendar-search button{
+  padding:8px 15px;
+  border-radius:5px;
+  border:none;
+  background:#1e40af;
+  color:white;
+  cursor:pointer;
+}
+.calendar-header{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  text-align:center;
+  font-weight:600;
+  margin-bottom:0;
+}
+.calendar-header div{
+  border:2px solid black;
+  padding:10px;
+  background:#d1d5db;
+}
+.calendar-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  border-left:2px solid black;
+  border-top:2px solid black;
+}
+.calendar-grid .day{
+  min-height:100px;
+  background:#d0d0d0;
+  border-right:2px solid black;
+  border-bottom:2px solid black;
+  display:flex;
+  flex-direction:column;
+  padding:5px;
+  cursor:pointer;
+  transition:background 0.2s;
+}
+.calendar-grid .day.empty{background:black;cursor:default;}
+.calendar-grid .day span{font-weight:600;margin-bottom:5px;}
+.calendar-grid .day.other-month{background:#b0b0b0;color:#666;}
+.calendar-grid .day.selected{background:#a0f0a0;}
+.calendar-grid .day .event{
+  background:#e0f2ff;
+  color:#1d4ed8;
+  font-size:14px;
+  padding:4px 6px;
+  border-radius:6px;
+  margin-top:4px;
+}
+.calendar-event-display{
+  margin-top:25px;
+  padding:15px;
+  border-radius:10px;
+  background:#e0f2ff;
+  color:#1d4ed8;
+  font-weight:600;
+  font-size:18px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contact box inline */
+.contact-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+.contact-box{
+  padding:6px 10px;
+  border:1px solid #555;
+  background:#e0fdfc;
+  border-radius:4px;
+  cursor:pointer;
+  font-size:14px;
+  min-width:fit-content;
+}
+.contact-box:hover{background:#c8f4f0;}
+
+/* Our Pastor */
+.pastor-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.pastor-container img{
+  max-width:400px;
+  height:auto;
+  border-radius:10px;
+  flex-shrink:0;
+}
+.pastor-text{
+  flex:1;
+  font-size:16px;
+  line-height:1.7;
+  font-family:'Inter',sans-serif;
+}
+
+/* Gallery */
+.gallery-container{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  max-width:90%;
+  margin:0 auto 30px auto;
+  overflow:hidden;
+}
+.gallery-container img{
+  max-width:600px;
+  width:100%;
+  border-radius:10px;
+  transition:transform 0.5s ease;
+}
+.gallery-btn{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#1e40af;
+  color:white;
+  border:none;
+  padding:5px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+.gallery-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#1e40af;
+  color:white;
+  border:none;
+  padding:5px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+.gallery-arrow.left{left:10px;}
+.gallery-arrow.right{right:10px;}
+
+/* Grid view */
+.grid-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:10px;
+}
+.grid-container img{
+  width:100%;
+  border-radius:10px;
+}
+
+@media(max-width:768px){
+  body{flex-direction:column;}
+  .sidebar{width:100%;flex-direction:row;overflow-x:auto;}
+  .sidebar-links{display:flex;flex-direction:row;}
+  .sidebar .dropdown-content{position:absolute;background:#1e293b;top:100%;left:0;margin:0;z-index:100;}
+}
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h2>Bideford Baptist Church</h2>
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+  </div>
+
+  <div class="sidebar-links">
+    <a data-page="home"><i class="fas fa-home"></i> Home</a>
+
+    <div class="dropdown">
+      <a><i class="fas fa-info-circle"></i> About Us <i class="fas fa-caret-down" style="margin-left:auto;"></i></a>
+      <div class="dropdown-content">
+        <a data-page="pastor">Our Pastor</a>
+        <a data-page="deacons">Meet the Deacons</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a><i class="fas fa-image"></i> Gallery <i class="fas fa-caret-down" style="margin-left:auto;"></i></a>
+      <div class="dropdown-content">
+        <a data-page="images">Images</a>
+        <a data-page="videos">Videos</a>
+        <a data-page="sermons">Sermons</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a><i class="fas fa-file-alt"></i> Policies <i class="fas fa-caret-down" style="margin-left:auto;"></i></a>
+      <div class="dropdown-content">
+        <a target="_blank" href="https://www.bidefordbaptist.org.uk/welcome/">Unfortunately our policies can only be viewed at https://www.bidefordbaptist.org.uk/welcome/ currently.</a>
+      </div>
+    </div>
+
+    <a data-page="calendar"><i class="fas fa-calendar-alt"></i> Calendar</a>
+    <a data-page="events"><i class="fas fa-bullhorn"></i> Events</a>
+    <a data-page="resources"><i class="fas fa-folder-open"></i> Resources</a>
+    <a data-page="devotional"><i class="fas fa-book-open"></i> Devotional</a>
+    <a data-page="vision"><i class="fas fa-lightbulb"></i> Vision & Christian Living</a>
+    <a data-page="links"><i class="fas fa-link"></i> Links</a>
+  </div>
+
+  <div class="sidebar-contact-wrapper">
+    <div class="sidebar-contact" data-page="contact">Contact Us</div>
+  </div>
+</nav>
+
+<div class="main" id="mainContent"></div>
+
+<script>
+// Dropdown toggle
+document.querySelectorAll(".sidebar .dropdown > a").forEach(drop=>{
+  drop.addEventListener("click",()=>{drop.parentElement.classList.toggle("active");});
+});
+
+// Sidebar links
+const sidebarLinks=document.querySelectorAll(".sidebar a[data-page]");
+const contactBtn=document.querySelector(".sidebar-contact");
+contactBtn.addEventListener("click",()=>navigateTo("contact"));
+
+// Calendar
+let currentDate=new Date();
+let selectedDay=null;
+const monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];
+function getOrdinal(n){if(n>3 && n<21) return "th"; switch(n%10){case 1:return"st";case 2:return"nd";case 3:return"rd";default:return"th";}}
+
+// Search filter
+document.getElementById("searchInput").addEventListener("keyup",()=>{
+  const val=document.getElementById("searchInput").value.toLowerCase();
+  sidebarLinks.forEach(link=>{link.style.display=link.textContent.toLowerCase().includes(val)?"flex":"none";});
+});
+
+sidebarLinks.forEach(link=>link.addEventListener("click",()=>navigateTo(link.getAttribute("data-page"))));
+
+// Gallery images
+const galleryImages=[
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.vzr_FOhPzlmkPEomPrWFBwHaJ4%3Fpid%3DApi&f=1", // Home
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.Krv39rr_PYbGvAnm7Rm5GgAAAA%3Fpid%3DApi&f=1" // Pastor
+];
+
+let currentGalleryIndex=0;
+let gridMode=false;
+
+function initGallery(){
+  const imgs=document.querySelectorAll("#galleryContainer img");
+  const toggleBtn=document.getElementById("toggleGridBtn");
+  const prevBtn=document.getElementById("prevArrow");
+  const nextBtn=document.getElementById("nextArrow");
+
+  function showIndex(i){
+    imgs.forEach((img,idx)=>img.style.display=(idx===i?"block":"none"));
+  }
+  prevBtn.addEventListener("click",()=>{currentGalleryIndex=(currentGalleryIndex-1+imgs.length)%imgs.length; showIndex(currentGalleryIndex);});
+  nextBtn.addEventListener("click",()=>{currentGalleryIndex=(currentGalleryIndex+1)%imgs.length; showIndex(currentGalleryIndex);});
+  toggleBtn.addEventListener("click",()=>{
+    gridMode=!gridMode;
+    if(gridMode){
+      let gridHTML='<div class="grid-container">';
+      galleryImages.forEach(src=>gridHTML+=`<img src="${src}">`);
+      gridHTML+='</div>';
+      document.getElementById("mainContent").innerHTML='<h1>Images</h1>'+gridHTML+'<button class="gallery-btn" id="toggleGridBtn">Normal View</button>';
+      initGallery();
+    } else navigateTo("images");
+  });
+}
+
+// Navigation
+function navigateTo(page){
+  const main=document.getElementById("mainContent");
+  sidebarLinks.forEach(link=>link.classList.toggle("active",link.getAttribute("data-page")===page));
+
+  if(page==="home"){
+    main.innerHTML=`<h1>Welcome to Bideford Baptist Church</h1>
+      <p>The House that welcomes, loves, and accepts us exactly as we are.</p>
+      <img src="${galleryImages[0]}" alt="Church Image">`;
+  } else if(page==="pastor"){
+    main.innerHTML=`<h1>Our Pastor</h1>
+    <div class="pastor-container">
+      <img src="${galleryImages[1]}" alt="Our Pastor">
+      <div class="pastor-text">
+        I grew up in Herefordshire where as a family we attended an Independent Baptist Church. I committed my life to Christ as a child and was baptised as a teenager. My personal relationship with Jesus came alive during my time as a student training to be a PE teacher. Here I mixed with people from all denominations in a vibrant Christian Union. On leaving college I took up a teaching post at a small boarding school. I worked there for 12 years, during which time I married Cath and our first child was born. Sensing a call to some kind of mission work we contacted WEC International and as a result I left teaching and studied for 2 years at Northumbria Bible College. Cath had already studied at Birmingham Bible Institute for 3 years before we met, so she was waiting for me to catch up ! 
+
+        The WEC course was a wonderful time, meeting so many people working in different parts of the world, but sadly for us there was a growing realisation that this was not what God had for us. We completed the course but did not go forward to join WEC.  Two years later, after a testing time of exploring God's call on our lives, we took up a part time Pastorate of a Baptist Church in Somerset, which is where our second child was born.  I was encouraged by the then Superintendent to become an Accredited Baptist Minister, a process which was finally completed during our second Pastorate in Cheshire. From there we moved to the West Midlands and enjoyed a very happy 11+ years serving a diverse community.  It was a great surprise to us that during 2019 God made it perfectly clear that we should come here to Bideford. Having taken up the Pastorate in December 2019, we are excited about what God is going to do through us and the Church Fellowship as we seek to serve Him and make His Name known here in North Devon.
+      </div>
+    </div>`;
+  } else if(page==="images"){
+    let galleryHTML = `<h1>Images</h1><button class="gallery-btn" id="toggleGridBtn">Grid View</button><div class="gallery-container" id="galleryContainer">`;
+    galleryImages.forEach((src, i)=>{
+      galleryHTML += `<img src="${src}" data-index="${i}" style="display:${i===0?'block':'none'};">`;
+    });
+    galleryHTML += `</div><div class="gallery-arrow left" id="prevArrow"><i class="fas fa-chevron-left"></i></div>
+                    <div class="gallery-arrow right" id="nextArrow"><i class="fas fa-chevron-right"></i></div>`;
+    main.innerHTML = galleryHTML;
+    initGallery();
+  } else if(page==="videos"){
+    main.innerHTML=`<h1>Videos</h1><p>Currently no Videos in our media</p>`;
+  } else if(page==="sermons"){
+    main.innerHTML=`<h1>Sermons</h1><p>Currently no Sermons in our media</p>`;
+  } else if(page==="calendar"){
+    main.innerHTML=`<h1>Calendar</h1>
+      <div class="calendar-controls">
+        <button onclick="prevMonth()"><i class="fas fa-arrow-left"></i></button>
+        <div class="calendar-month" id="calendarMonth">${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}</div>
+        <button onclick="nextMonth()"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="calendar-header">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+      <div class="calendar-event-display" id="calendarEventDisplay">Select a day to see events.</div>`;
+    renderCalendar();
+  } else if(page==="contact"){
+    main.innerHTML=`<h1>Contact Us</h1>
+      <div class="contact-row">
+        <div class="contact-box">Phone: 01237 423456</div>
+        <div class="contact-box">Email: info@bidefordbaptist.org.uk</div>
+        <div class="contact-box">Address: Church Street, Bideford, EX39 2ET</div>
+      </div>`;
+  }
+}
+
+// Calendar functions
+function renderCalendar(){
+  const grid=document.getElementById("calendarGrid");
+  grid.innerHTML="";
+  const year=currentDate.getFullYear();
+  const month=currentDate.getMonth();
+  const firstDay=new Date(year,month,1).getDay();
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const daysInPrevMonth=new Date(year,month,0).getDate();
+
+  for(let i=0;i<firstDay;i++){
+    let d=daysInPrevMonth-firstDay+i+1;
+    const dayDiv=document.createElement("div");
+    dayDiv.classList.add("day","other-month");
+    dayDiv.innerHTML=`<span>${d}</span>`;
+    grid.appendChild(dayDiv);
+  }
+
+  for(let d=1;d<=daysInMonth;d++){
+    const dayDiv=document.createElement("div");
+    dayDiv.classList.add("day");
+    dayDiv.innerHTML=`<span>${d}</span>`;
+    dayDiv.addEventListener("click",()=>selectDay(d));
+    grid.appendChild(dayDiv);
+  }
+
+  let nextDays=42-firstDay-daysInMonth;
+  for(let i=1;i<=nextDays;i++){
+    const dayDiv=document.createElement("div");
+    dayDiv.classList.add("day","other-month");
+    dayDiv.innerHTML=`<span>${i}</span>`;
+    grid.appendChild(dayDiv);
+  }
+}
+
+function selectDay(day){
+  selectedDay=day;
+  document.querySelectorAll(".calendar-grid .day").forEach(d=>d.classList.remove("selected"));
+  document.querySelectorAll(".calendar-grid .day").forEach(d=>{
+    if(d.querySelector("span").textContent==day && !d.classList.contains("other-month")) d.classList.add("selected");
+  });
+  document.getElementById("calendarEventDisplay").innerText=`Events for ${day}${getOrdinal(day)} ${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}: None`;
+}
+
+function prevMonth(){currentDate.setMonth(currentDate.getMonth()-1); document.getElementById("calendarMonth").innerText=`${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`; renderCalendar();}
+function nextMonth(){currentDate.setMonth(currentDate.getMonth()+1); document.getElementById("calendarMonth").innerText=`${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`; renderCalendar();}
+
+// Initialize
+navigateTo("home");
+</script>
+</body>
+</html>
