@@ -4,7 +4,6 @@
   ::-webkit-scrollbar { display: none; }
   html, body { scrollbar-width: none; -ms-overflow-style: none; }
 </style>
-
 <head>
   <title>Bideford Baptist Church</title>
   <link rel="icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.spzP75vpmyv707l8oLl0OAAAAA%3Fpid%3DApi&f=1&ipt=21f454a2709f997dd2aee255e92794874b175c609bb95631bfade06a4078e4ce&ipo=images" type="image/png">
@@ -29,7 +28,7 @@ body {
 
 /* Sidebar styles */
 .sidebar {
-  width: 280px;
+  width: 15vw;
   background-color: #1e293b;
   color: #fff;
   display: flex;
@@ -39,21 +38,21 @@ body {
   z-index: 10;
 }
 .sidebar-header {
-  padding: 25px 20px 10px 20px;
+  padding: 2.31vh 1.04vw 0.93vh 1.04vw;
 }
 .sidebar-header h2 {
-  font-size: 22px;
+  font-size: 2.04vh;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 1.39vh;
   text-align: center;
 }
 .search-box {
   display: flex;
   align-items: center;
-  background: #3b82f6;
-  border-radius: 50px;
-  padding: 8px 12px;
-  margin: 10px 20px;
+  background: #0e2b5a;
+  border-radius: 2.60vw;      
+  padding: 0.74vh 0.63vw;
+  margin: 0.93vh 1.04vw;
 }
 .search-box i {
   color: #a0aec0;
@@ -62,42 +61,49 @@ body {
   border: none;
   background: transparent;
   color: #fff;
-  margin-left: 10px;
+  margin-left: 0.52vw;
   width: 100%;
   outline: none;
-  font-size: 14px;
+  font-size: 1.30vh;
+
 }
 .sidebar-links {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 20px;
+  padding-bottom: 1.85vh;
 }
+
 .sidebar::-webkit-scrollbar {
   display: none;
 }
+
 .sidebar {
   scrollbar-width: none;
 }
+
 .sidebar a {
   display: flex;
   align-items: center;
-  padding: 12px 15px;
-  margin-bottom: 8px;
-  border-radius: 8px;
+  padding: 1.11vh 0.78vw;
+  margin-bottom: 0.74vh;
+  border-radius: 0.42vw;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
 }
+
 .sidebar a i {
-  margin-right: 10px;
-  width: 20px;
+  margin-right: 0.52vw;
+  width: 1.04vw;
   text-align: center;
 }
+
 .sidebar a:hover,
 .sidebar a.active {
   background: #3a4b63;
-  transform: translateX(5px);
+  transform: translateX(0.26vw);
 }
+
 .sidebar .dropdown {
   flex-direction: column;
   position: relative;
@@ -111,23 +117,26 @@ body {
 .sidebar .dropdown-content {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 1.04vw;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
+
 .sidebar .dropdown.active .dropdown-content {
-  max-height: 500px;
+  max-height: 46.30vh;
   opacity: 1;
 }
+
 .sidebar .dropdown-content a {
-  margin-bottom: 5px;
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 5px;
+  margin-bottom: 0.46vh;
+  font-size: 1.30vh;
+  padding: 0.74vh 0.63vw;
+  border-radius: 0.26vw;
   color: #fff;
 }
+
 .sidebar .dropdown-content a:hover {
   background: #475569;
   cursor: pointer;
@@ -144,32 +153,71 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 1.39vh;
   font-weight: 500;
   cursor: pointer;
-  border-top: 1px solid #475569;
+  border-top: 0.052vw solid #475569;
   width: 100%;
 }
+
 
 /* Main content styles */
 .main {
   flex: 1;
-  padding: 20px;
+  padding: 1.85vh;
   overflow-y: auto;
 }
-h1 { font-size: 36px; margin-bottom: 15px; }
-p { font-size: 18px; line-height: 1.7; margin-bottom: 30px; }
-img { display: block; margin: 30px auto 0 auto; border-radius: 10px; object-fit: cover; width: 25%; aspect-ratio: 1/1; }
-.homepage-img { width: 500px; height: 625px; margin: 50px auto 20px auto; }
+
+h1 {
+  font-size: 3.33vh;
+  margin-bottom: 1.39vh;
+}
+
+p {
+  font-size: 1.67vh;
+  line-height: 1.7;
+  margin-bottom: 2.78vh;
+}
+
+img {
+  display: block;
+  margin: 2.78vh auto 0 auto;
+  border-radius: 0.52vw;
+  object-fit: cover;
+  width: 25%;
+  aspect-ratio: 1/1;
+}
+
+.homepage-img {
+  width: 26.04vw;
+  height: 57.87vh;
+  margin: 4.63vh auto 1.85vh auto;
+}
+
 .gallery-container {
-  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.52vw;
+  justify-content: center;
 }
+
 .gallery-container img {
-  width: 200px; height: 200px; object-fit: cover; cursor: pointer; transition: 0.3s;
+  width: 10.42vw;
+  height: 18.52vh;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
 .gallery-container img.enlarged {
-  width: 80vw; height: 80vw; max-width: 600px; max-height: 600px; position: relative; z-index: 1000;
+  width: 80vw;
+  height: 80vw;
+  max-width: 31.25vw;
+  max-height: 55.56vh;
+  position: relative;
+  z-index: 1000;
 }
+
 
 /* Overlay for enlarged images */
 #imageOverlay {
@@ -179,88 +227,134 @@ img { display: block; margin: 30px auto 0 auto; border-radius: 10px; object-fit:
   background-color: rgba(0,0,0,0.8);
   justify-content: center; align-items: center; flex-direction: column; z-index: 2000;
 }
-#imageOverlay.show { display: flex; }
-#enlargedImage { max-height: 90vh; max-width: 90vw; object-fit: contain; border-radius: 10px; }
-#navArrows { margin-top: 10px; display: flex; gap: 20px; }
-.navArrow { font-size: 2em; color: #fff; cursor: pointer; }
+#imageOverlay.show {
+  display: flex;
+}
 
-/* Calendar styles */
+#enlargedImage {
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain; 
+  border-radius: 0.52vw;
+}
+
+#navArrows {
+  margin-top: 0.93vh;
+  display: flex;
+  gap: 1.04vw;
+}
+
+.navArrow {
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Calendar */
 .calendar-controls {
-  display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.78vw;
+  margin-bottom: 1.39vh;
 }
+
 .calendar-controls button {
-  padding: 5px 10px; border: none; border-radius: 5px; background: #000; color: #fff; font-weight: 600; cursor: pointer;
+  padding: 0.46vh 0.52vw;
+  border: none;
+  border-radius: 0.26vw;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
+
 .calendar-month {
-  font-size: 22px; font-weight: 600; text-align: center; margin-bottom: 10px; flex-grow: 1;
+  font-size: 2.04vh;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.93vh;
+  flex-grow: 1;
 }
+
 .calendar-header {
-  display: grid; grid-template-columns: repeat(7, 1fr);
-  text-align: center; font-weight: 600;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
 }
+
 .calendar-header div {
-  border: 2px solid black; padding: 10px; background: #d1d5db;
+  border: 0.10vw solid black;
+  padding: 0.93vh;
+  background: #d1d5db;
 }
+
 .calendar-grid {
-  display: grid; grid-template-columns: repeat(7, 1fr);
-  border-left: 2px solid black; border-top: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-left: 0.10vw solid black;
+  border-top: 0.10vw solid black;
 }
+
 .day {
-  min-height: 100px;
-  border-right: 2px solid black; border-bottom: 2px solid black;
-  display: flex; flex-direction: column; align-items: center; padding: 5px; font-size: 14px; cursor: pointer; justify-content: flex-start;
+  min-height: 9.26vh;
+  border-right: 0.10vw solid black;
+  border-bottom: 0.10vw solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.46vh;
+  font-size: 1.30vh;
+  cursor: pointer;
+  justify-content: flex-start;
 }
+
 .day .date-number {
-  font-weight: 600; font-size: 14px; margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.30vh;
+  margin-bottom: 0.46vh;
 }
+
 .day.other-month {
-  background: #b0b0b0; color: #666;
+  background: #b0b0b0;
+  color: #666;
 }
+
 .day .event {
-  background: #e0f2ff; color: #1d4ed8; font-size: 14px; padding: 4px 6px; border-radius: 6px; margin-top: 4px; cursor: pointer;
+  background: #e0f2ff;
+  color: #1d4ed8;
+  font-size: 1.30vh;
+  padding: 0.37vh 0.31vw;
+  border-radius: 0.31vw;
+  margin-top: 0.37vh;
+  cursor: pointer;
 }
+
 #calendarEventDisplay {
-  margin-top: 25px; padding: 15px; border-radius: 10px; background: #e0f2ff; color: #1d4ed8; font-weight: 600; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Hide full sidebar on small screens (mobile) */
-@media (max-width: 899px) {
-  .sidebar {
-    display: none !important; /* Hide desktop sidebar on mobile */
-  }
-  .mobile-topbar,
-  .overlay {
-    display: flex !important; /* Show mobile topbar & overlay */
-  }
-}
-
-/* Hide mobile topbar on desktop, show desktop sidebar */
-@media (min-width: 900px) {
-  .mobile-topbar,
-  .overlay {
-    display: none !important; /* Hide mobile menu button and overlay on large screens */
-  }
-  .sidebar {
-    display: flex !important;   /* Show desktop sidebar */
-    transform: none !important;
-    position: relative !important;
-    width: 280px;
-  }
-  body {
-    flex-direction: row;
-  }
+  margin-top: 2.31vh;
+  padding: 1.39vh;
+  border-radius: 0.52vw;
+  background: #e0f2ff;
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 1.67vh;
+  box-shadow: 0 0.37vh 0.93vh rgba(0,0,0,0.1);
 }
 
 </style>
 </head>
 <body>
+<script>
+    const ScreenWidth = window.innerWidth;
+    const ScreenHeight = window.innerHeight;
 
-<!-- Mobile Topbar -->
-<div class="mobile-topbar" style="background:#1e293b; color:#fff; padding:10px; display:flex; align-items:center;">
-  <span class="hamburger" style="cursor:pointer; margin-right:10px;"><i class="fas fa-bars"></i></span>
-  <h2 style="font-size:1.2em;">Bideford Baptist Church</h2>
-</div>
-<div class="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9;"></div>
+    // Example: 0.15 times screen width & height
+    const sizeFromWidth = 0.15 * ScreenWidth;
+    const sizeFromHeight = 0.15 * ScreenHeight;
+
+    console.log("ScreenWidth:", ScreenWidth, "ScreenHeight:", ScreenHeight);
+    console.log("0.15 * Width:", sizeFromWidth, "0.15 * Height:", sizeFromHeight);
+  </script>
 
 <!-- Sidebar navigation -->
 <nav class="sidebar">
@@ -288,12 +382,6 @@ img { display: block; margin: 30px auto 0 auto; border-radius: 10px; object-fit:
         <a data-page="sermons">Sermons</a>
       </div>
     </div>
-    <div class="dropdown">
-      <a style="cursor:pointer;"><i class="fas fa-file-alt"></i> Policies <i class="fas fa-caret-down" style="margin-left:auto;"></i></a>
-      <div class="dropdown-content">
-        <a target="_blank" href="https://www.bidefordbaptist.org.uk/welcome/">Redirect</a>
-      </div>
-    </div>
     <a data-page="calendar"><i class="fas fa-calendar-alt"></i> Calendar</a>
     <a data-page="events"><i class="fas fa-bullhorn"></i> Events</a>
     <a data-page="resources"><i class="fas fa-folder-open"></i> Resources</a>
@@ -310,28 +398,38 @@ img { display: block; margin: 30px auto 0 auto; border-radius: 10px; object-fit:
 <div class="main" id="mainContent"></div>
 
 <!-- Image overlay for enlarged images -->
-<div id="imageOverlay" style="display:none; align-items:center; justify-content:center; flex-direction:column; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); z-index:2000;">
-  <img id="enlargedImage" src="" style="max-height:90vh; max-width:90vw; object-fit:contain; border-radius:10px; margin:auto;">
-  <div id="navArrows" style="margin-top:10px; display:flex; gap:20px;">
+<div id="imageOverlay" style="
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2000;
+">
+  <img id="enlargedImage" src="" style="
+    max-height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
+    border-radius: 0.52vw; /* responsive border radius */
+    margin: auto;
+  ">
+  <div id="navArrows" style="
+    margin-top: 0.93vh; /* responsive spacing */
+    display: flex;
+    gap: 1.04vw; /* responsive gap between arrows */
+  ">
     <div class="navArrow" id="prevImg"><i class="fas fa-chevron-left"></i></div>
     <div class="navArrow" id="nextImg"><i class="fas fa-chevron-right"></i></div>
   </div>
 </div>
 
-<script>
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const sidebar = document.querySelector('.sidebar');
-const overlay = document.querySelector('.overlay');
 
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('open');
-  overlay.style.display='block';
-});
-overlay.addEventListener('click', () => {
-  sidebar.classList.remove('open');
-  overlay.style.display='none';
-});
+<script>
 
 // Dropdown toggle
 document.querySelectorAll('.sidebar .dropdown > a').forEach(d => {
@@ -437,69 +535,200 @@ function navigateTo(page) {
   } else if (page==='pastor') {
     main.innerHTML = `
       <h1>Our Pastor</h1>
-      <div style="display:flex; align-items:flex-start; gap:20px;">
-        <img src="${galleryImages[1]}" style="width:300px; border-radius:10px;"/>
-        <div style="font-size:20px; line-height:1.5; color:black;">
+      <div style="display:flex; align-items:flex-start; gap:1.04vw;">
+        <img src="${galleryImages[1]}" style="width:15.62vw; border-radius:0.52vw;"/>
+        <div style="font-size:1.85vh; line-height:1.5; color:black;">
           I grew up in Herefordshire where as a family we attended an Independent Baptist Church. I committed my life to Christ as a child and was baptised as a teenager. My personal relationship with Jesus came alive during my time as a student training to be a PE teacher. Here I mixed with people from all denominations in a vibrant Christian Union. On leaving college I took up a teaching post at a small boarding school. I worked there for 12 years, during which time I married Cath and our first child was born. Sensing a call to some kind of mission work we contacted WEC International and as a result I left teaching and studied for 2 years at Northumbria Bible College. Cath had already studied at Birmingham Bible Institute for 3 years before we met, so she was waiting for me to catch up ! 
 
           The WEC course was a wonderful time, meeting so many people working in different parts of the world, but sadly for us there was a growing realisation that this was not what God had for us. We completed the course but did not go forward to join WEC.  Two years later, after a testing time of exploring God's call on our lives, we took up a part time Pastorate of a Baptist Church in Somerset, which is where our second child was born.  I was encouraged by the then Superintendent to become an Accredited Baptist Minister, a process which was finally completed during our second Pastorate in Cheshire. From there we moved to the West Midlands and enjoyed a very happy 11+ years serving a diverse community.  It was a great surprise to us that during 2019 God made it perfectly clear that we should come here to Bideford. Having taken up the Pastorate in December 2019, we are excited about what God is going to do through us and the Church Fellowship as we seek to serve Him and make His Name known here in North Devon. 
         </div>
       </div>
     `;
+    
   } else if(page==='deacons'){
-main.innerHTML=`<h1>Meet the Deacons</h1>
-<div style="display:flex; gap:20px; margin-bottom:40px;">
-<img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/1647720149-3IvjEpJt.jpg?1730222694" style="width: 500px; height: 250px; border-radius:10px;"/>
-<div style="font-size:24px; line-height:1.6; padding-right:400px; padding-top:25px;">
-We are a mixed bunch, from various walks of life, but we all feel privileged and blessed to be able to serve our Church Family, using the various gifts and skills we have picked up along the way!
+main.innerHTML=`
+<h1>Meet the Deacons</h1>
+
+<div style="display:flex; gap:1.04vw; margin-bottom:2.31vh;">
+  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/1647720149-3IvjEpJt.jpg?1730222694" style="width:27.5vw; height:20vh; border-radius:0.52vw;"/>
+  <div style="font-size:1.85vh; line-height:1.6; padding-right:16.66vw; padding-top:1.85vh;">
+    We are a mixed bunch, from various walks of life, but we all feel privileged and blessed to be able to serve our Church Family, using the various gifts and skills we have picked up along the way!
+  </div>
 </div>
 
-
-</div>
-<div style="display:flex; gap:20px; margin-bottom:40px; flex-direction:row-reverse;">
-  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/18.jpg" style="width: 300px; height: 200px; border-radius:10px;"/>
-  <div style="font-size:18px; line-height:1.6; padding-left:400px; padding-top:25px;">
+<div style="display:flex; gap:1.04vw; margin-bottom:2.31vh; flex-direction:row-reverse;">
+  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/18.jpg" style="width:20vw; height:20vh; border-radius:0.50vw;"/>
+  <div style="font-size:1.67vh; line-height:1.6; padding-left:16.66vw; padding-top:1.85vh;">
     <span style="font-weight:bold; text-decoration:underline;">Janice Goodney - Treasurer</span><br><br>
     I was born in Chiswick in 1956. I got married and went to live in Greece for 5 years. I have one daughter, but unfortunately the marriage did not last. I met my second husband, Dave, 20 years ago (he has recently found Jesus and now sings with us in the Worship Team). I have one step-daughter, and a new grandson, who currently live in Canada. I lived in Bracknell for many years and met with Jesus Christ in a large church, and was baptised in October 2005. God inspired me to move to Bideford and to come to Bideford Baptist Church, to give up my full-time job to work at Wings South-West (a local Christian Charity dedicated to helping young people in this area), all since 2008! I am now the Church Treasurer, and do my best to serve Our Lord and Church family.
-    </div>
+  </div>
 </div>
 
-
-
-</div>
-<div style="display:flex; gap:20px; margin-bottom:40px;">
-  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/15.jpg" style="width: 300px; height: 200px; border-radius:10px;"/>
-  <div style="font-size:18px; line-height:1.6; padding-right:400px; padding-top:25px;">
+<div style="display:flex; gap:1.04vw; margin-bottom:2.31vh;">
+  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/15.jpg" style="width:20vw; height:20vh; border-radius:0.50vw; object-fit:cover; object-position:center top;"/>
+  <div style="font-size:1.67vh; line-height:1.6; padding-right:16.66vw; padding-top:1.85vh;">
     <span style="font-weight:bold; text-decoration:underline;">Pam Rowland - Pastoral Care Leader and Secretary</span><br><br>
     Hi! - My name is Pam Rowland, I attend Bideford Baptist Church and I became a Church Member in 1981, and a Deacon in 2000. Bideford Baptist Church is my home – the love and support which I have received here during some difficult times has been wonderful. We might make mistakes, but our love not only for those who come to Church, but also for those outside, is a testament to God's love pouring out on us. I have recently completed a 3-year Training Course at Bristol Baptist College (“Prepare for Service for Lay Preachers/Pastors”), following which I was appointed as Pastoral Care Leader for the Church, and have enjoyed preaching a few times. This is a clear measure of how much God has been working in my life, as years ago I said I did not believe in women preachers!!!!
   </div>
 </div>
 
-</div>
-<div style="display:flex; gap:20px; margin-bottom:40px; flex-direction:row-reverse;">
-  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/16.jpg" style="width: 300px; height: 200px; border-radius:10px; object-fit:cover; object-position: center top;"/>
-  <div style="font-size:18px; line-height:1.6; padding-left:400px; padding-top:25px;">
+<div style="display:flex; gap:1.04vw; margin-bottom:2.31vh; flex-direction:row-reverse;">
+  <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/16.jpg" style="width:20vw; height:20vh; border-radius:0.50vw; object-fit:cover; object-position:center top;"/>
+  <div style="font-size:1.67vh; line-height:1.6; padding-left:16.66vw; padding-top:1.85vh;">
     <span style="font-weight:bold; text-decoration:underline;">John Lester - Deacon</span><br><br>
-    Hi – I am John Lester, and now retired from \"paid\" employment. I have been a member of this Church since 1971, and a Deacon since 2006. I am blessed with a wonderful wife, children and grandchildren, as well as the wider church family. It is an absolute joy to meet be involved with and to serve this Church Family and where possible the wider community of Bideford. Being a Christian is not an easy road to follow – there are bad times, difficult periods and really good times, times of personal success and failure, but through all of these I am so thankful that God's love through His Saviour Son Jesus and the Holy Spirit never, ever stops streaming to us all. God Bless.
+    Hi – I am John Lester, and now retired from "paid" employment. I have been a member of this Church since 1971, and a Deacon since 2006. I am blessed with a wonderful wife, children and grandchildren, as well as the wider church family. It is an absolute joy to meet be involved with and to serve this Church Family and where possible the wider community of Bideford. Being a Christian is not an easy road to follow – there are bad times, difficult periods and really good times, times of personal success and failure, but through all of these I am so thankful that God's love through His Saviour Son Jesus and the Holy Spirit never, ever stops streaming to us all. God Bless.
   </div>
 </div>
 
-
-</div>
-<div style="display:flex; gap:20px; margin-bottom:40px;">
-  <img src="https://www.bidefordbaptist.org.uk/content/images/original/jrx3koc4wq2luv5h6ignsb7tm09da8yf1pe.jpeg" style="width: 300px; height: 200px; border-radius:10px; object-fit:cover; object-position: center top;"/>
-  <div style="font-size:18px; line-height:1.6; padding-right:400px; padding-top:25px;">
+<div style="display:flex; gap:1.04vw; margin-bottom:2.31vh;">
+  <img src="https://www.bidefordbaptist.org.uk/content/images/original/jrx3koc4wq2luv5h6ignsb7tm09da8yf1pe.jpeg" style="width:20vw; height:20vh; border-radius:0.50vw; object-fit:cover; object-position:center top;"/>
+  <div style="font-size:1.67vh; line-height:1.6; padding-right:16.66vw; padding-top:1.85vh;">
     <span style="font-weight:bold; text-decoration:underline;">Brian Eastman - Deacon</span><br><br>
     Hi, I am Brian, and I have been a member of Bideford Baptist Church since 2013. I was born in Appledore, just a few miles down the road and I used to attend St. Mary's Church in Appledore as a child. I stopped attending church as a teenager and did not return until 2012. Soon after I stumbled across Bideford Baptist Church and it rapidly became my home. I completed a 3 year course at Bristol Baptist College (Prepare for Service for Lay Preachers/Pastors). God has played a massive part in my life and now i have the opportunity and privilege to be able to serve God and His Church.
   </div>
 </div>
+`;
 
-</div>`;
+  } else if(['videos','sermons'].includes(page)){
+    main.innerHTML=`<h1>${page}</h1><p>We currently have no media for these pages.</p>`;
 
-  } else if(['videos','sermons','resources','devotional','vision'].includes(page)){
-    main.innerHTML=`<h1>${page}</h1><p>Apologies for the inconvenience but this page is currently undergoing works, it should be up and running soon.</p>`;
   } else if(page==='images'){
     loadImages();
+  
+  } else if(page==='resources'){
+    main.innerHTML = `
+      <h1 style="margin-bottom:1.85vh;">Resources</h1>
+
+      <p style="margin-bottom:2.31vh;">
+        Have questions about God, Jesus, the Bible, or theology?  
+        Whether you’re searching for answers, exploring faith, or looking to grow deeper in God’s Word, here are some trusted resources to help you on the journey:
+      </p>
+
+      <h2 style="margin-top:2.78vh; margin-bottom:0.93vh;">🌐 Online Resources</h2>
+      <ul style="margin-bottom:2.31vh; line-height:1.8;">
+        <li><a href="https://www.gotquestions.org/" target="_blank">Got Questions</a> – Straightforward, Bible-based answers to thousands of spiritual questions.</li>
+        <li><a href="https://www.biblesociety.org.uk/" target="_blank">Bible Society</a> – Access <em>“You've Got The Time”</em>, the New Testament read aloud in a fresh, modern style.</li>
+        <li><a href="https://www.biblegateway.com/" target="_blank">Bible Gateway</a> – Read and search the Bible in many translations, with devotionals, commentaries, and study plans.</li>
+        <li><a href="https://www.biblestudytools.com/" target="_blank">Bible Study Tools</a> – A full library of concordances, dictionaries, and study helps to deepen your understanding of Scripture.</li>
+      </ul>
+
+      <h2 style="margin-top:2.78vh; margin-bottom:0.93vh;">📱 Mobile Apps</h2>
+      <p style="margin-bottom:0.93vh;">Carry the Bible with you wherever you go:</p>
+      <ul style="margin-bottom:2.31vh; line-height:1.8;">
+        <li><a href="https://www.youversion.com/the-bible-app/" target="_blank">YouVersion Bible App</a> – Free, with 1000+ translations, audio Bibles, devotionals, and reading plans.</li>
+        <li><a href="https://www.olivetree.com/bible-apps/" target="_blank">Olive Tree Bible App</a> – Powerful study tools and resources available even offline.</li>
+      </ul>
+
+      <h2 style="margin-top:2.78vh; margin-bottom:0.93vh;">📚 Local & Printed Resources</h2>
+      <p style="margin-bottom:0.93vh;">If you enjoy the richness of printed books:</p>
+      <ul style="margin-bottom:2.31vh; line-height:1.8;">
+        <li><strong>GOOD LIVING BOOKSHOP</strong> – Conveniently located on Mill Street (Bideford), just in front of our church.</li>
+        <li>In our church’s <strong>Welcome Area</strong>, you’ll also find a small library of donated books, leaflets, and a selection of CDs/DVDs. Please feel free to take and use any of these resources.</li>
+      </ul>
+
+      <h2 style="margin-top:2.78vh; margin-bottom:0.93vh;">✨ More to Explore</h2>
+      <p style="margin-bottom:2.31vh;">
+        For additional helpful websites and study tools, visit our 
+        <a href="#links" onclick="navigateTo('links')">Links</a>
+        page.
+      </p>
+
+      <hr style="margin:2.78vh 0;">
+
+      <p style="font-style: italic; color: gray; text-align: center;">
+        “Your word is a lamp to my feet and a light to my path.” – Psalm 119:105
+      </p>
+    `;
+
+  } else if(page==='devotional'){
+    main.innerHTML = `
+    <h1 style="margin-bottom:1.39vh;">Daily Devotional</h1>
+
+      <p style="text-align:center; font-size:2.2vh; margin-bottom:1.85vh;">
+        Nourish your spirit each day with reflection, prayer, and scripture.  
+        Use this devotional resource to grow closer to God and strengthen your walk of faith.
+      </p>
+
+      <div style="display:flex; flex-direction:column; height:70%; justify-content:space-between;">
+
+        <div style="flex:1; display:flex; justify-content:center; align-items:center;">
+          <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/23.jpg" 
+               alt="Daily Devotional" 
+               style="width:100%; max-width:41.44vw; max-height:40vh; border-radius:0.63vw; box-shadow:0 0.31vh 1vh rgba(0,0,0,0.2);">
+        </div>
+
+        <div style="text-align:center; margin-bottom:2.78vh;">
+          <a href="http://ellel.org/uk/online/daily-devotionals/" target="_blank" 
+             style="display:inline-block; padding:0.93vh 2.05vw; background-color:#28a745; color:white; 
+                    font-size:1.9vh; font-weight:bold; text-decoration:none; border-radius:0.52vw; 
+                    box-shadow:0 0.23vh 0.75vh rgba(0,0,0,0.2); transition:0.2s transform ease-in-out;">
+            Visit Online Devotionals
+          </a>
+        </div>
+
+      </div>
+    `;
+  } else if(page==='vision'){
+    main.innerHTML = `
+      <h1 style="margin-bottom:1.85vh;">Vision and Christian Living</h1>
+
+      <p style="margin-bottom:2.31vh;">
+        As disciples of Jesus Christ, our mission reaches both locally and globally.  
+        We aim to extend God’s Kingdom through teaching, fellowship, worship, evangelism, and practical service—living out our faith in every aspect of life.
+      </p>
+
+      <section style="margin-bottom:3.70vh;">
+        <h2 style="margin-bottom:0.93vh;">📖 Biblical Teaching & Prayer</h2>
+        <p>
+          The Bible is the cornerstone of our community. Each Sunday, we gather to hear God’s Word preached with passion and conviction, empowered by the Holy Spirit.  
+          Prayer—both public and personal—is central to our lives, encompassing thanksgiving, intercession, and ministry, nurturing a close walk with Jesus Christ.
+        </p>
+        <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/28.jpeg" alt="Biblical Teaching and Prayer" style="width:100%; max-width:15.63vw; margin:1.85vh 0; display:block;">
+      </section>
+
+      <section style="margin-bottom:3.70vh;">
+        <h2 style="margin-bottom:0.93vh;">🤝 Caring Fellowship</h2>
+        <p>
+          Love shapes our community. Without it, our actions are "no more than a resounding gong or clanging cymbal" (1 Corinthians 13:1).  
+          We strive to reflect God’s love in our relationships, affirming Jesus’ words: "By this everyone will know that you are my disciples, if you love one another" (John 13:35).
+        </p>
+      </section>
+
+      <section style="margin-bottom:3.70vh;">
+        <h2 style="margin-bottom:0.93vh;">🎶 Living Worship</h2>
+        <p>
+          Worship flows from gratitude and a living relationship with God through Jesus Christ.  
+          Our gatherings celebrate Him through song, instruments, dance, and lifted hands, recognizing His life, death, and resurrection.  
+          Romans 12:1-2 guides us: offer your lives as living sacrifices, holy and pleasing to God, transformed by His will.
+        </p>
+        <img src="https://www.bidefordbaptist.org.uk/content/pages/uploaded_images/27.jpg" alt="Living Worship" style="width:100%; max-width:20.83vw; margin:1.85vh 0; display:block;">
+      </section>
+
+      <section style="margin-bottom:3.70vh;">
+        <h2 style="margin-bottom:0.93vh;">📣 Ongoing Evangelism</h2>
+        <p>
+          We actively share the Good News of Jesus Christ with those who have not yet heard of God’s love and mercy.  
+          Through events, ministries, and personal testimony at home, school, or work, we reach out to others, inviting them into the life-changing power of faith.
+        </p>
+      </section>
+
+      <section style="margin-bottom:3.70vh;">
+        <h2 style="margin-bottom:0.93vh;">👐 Practical Service</h2>
+        <p>
+          Faith without action is incomplete. Following Jesus’ example, we serve those in need, combining faith with tangible acts of love.  
+          As James 2:14-26 reminds us: "Faith without deeds is useless."  
+          Serving others embodies the heart of Christ and transforms our community.
+        </p>
+      </section>
+
+      <section style="margin-bottom:3.70vh; text-align:center;">
+        <h2>🌟 Our Commitment</h2>
+        <p style="font-weight:bold; font-size:2.2vh;">
+          "Lay a foundation that others can build on, and make disciples of those who believe!"
+        </p>
+      </section>
+    `;
+
   } else if(page==='calendar'){
     main.innerHTML=`
       <h1>Calendar</h1>
@@ -512,37 +741,38 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
         <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
       </div>
       <div class="calendar-grid" id="calendarGrid"></div>
-      <div id="calendarEventDisplay" style="margin-top:20px;">Select a date</div>
+      <div id="calendarEventDisplay" style="margin-top:1.85vh;">Select a date</div>
+
     `;
     renderCalendar();
 
 } else if (page==='contact'){
   main.innerHTML=`
     <h1>Contact Us</h1>
-    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; max-width:900px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; gap:2.1vw; justify-content:center; max-width:47.1vw; margin:auto;">
       
-      <div class="contact-card" data-copy="01237 471893" style="flex:1 1 250px; background:#e0e7ff; border-radius:12px; padding:25px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.2s;">
-        <div style="font-size:40px; margin-bottom:15px;">📞</div>
-        <div style="font-size:18px; font-weight:bold; margin-bottom:8px;">Phone</div>
-        <div style="font-size:16px;">+44 1237 471893<br>01237 471893</div>
+      <div class="contact-card" data-copy="01237 471893" style="flex:1 1 13.1vw; background:#e0e7ff; border-radius:1.3vw; padding:2.6vh; text-align:center; box-shadow:0 0.41vh 1.1vh rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.2s;">
+        <div style="font-size:3.9vh; margin-bottom:1.6vh;">📞</div>
+        <div style="font-size:1.8vh; font-weight:bold; margin-bottom:0.9vh;">Phone</div>
+        <div style="font-size:1.6vh;">+44 1237 471893<br>01237 471893</div>
       </div>
 
-      <div class="contact-card" data-copy="enquiries@bidefordbaptistchurch.com" style="flex:1 1 250px; background:#e0e7ff; border-radius:12px; padding:25px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.2s;">
-        <div style="font-size:40px; margin-bottom:15px;">✉️</div>
-        <div style="font-size:18px; font-weight:bold; margin-bottom:8px;">Email</div>
-        <div style="font-size:16px;">enquiries@bidefordbaptistchurch.com</div>
+      <div class="contact-card" data-copy="enquiries@bidefordbaptistchurch.com" style="flex:1 1 13.1vw; background:#e0e7ff; border-radius:1.3vw; padding:2.6vh; text-align:center; box-shadow:0 0.41vh 1.1vh rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.2s;">
+        <div style="font-size:3.9vh; margin-bottom:1.6vh;">✉️</div>
+        <div style="font-size:1.8vh; font-weight:bold; margin-bottom:0.9vh;">Email</div>
+        <div style="font-size:1.6vh;">enquiries@bidefordbaptistchurch.com</div>
       </div>
 
-      <div class="contact-card" data-copy="Mill Street, Bideford, Devon, EX39 2JR" style="flex:1 1 250px; background:#e0e7ff; border-radius:12px; padding:25px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.2s;">
-        <div style="font-size:40px; margin-bottom:15px;">📍</div>
-        <div style="font-size:18px; font-weight:bold; margin-bottom:8px;">Address</div>
-        <div style="font-size:16px;">Mill Street, Bideford, Devon, EX39 2JR</div>
+      <div class="contact-card" data-copy="Mill Street, Bideford, Devon, EX39 2JR" style="flex:1 1 13.1vw; background:#e0e7ff; border-radius:1.3vw; padding:2.6vh; text-align:center; box-shadow:0 0.41vh 1.1vh rgba(0,0,0,0.1); cursor:pointer; transition: transform 0.2s;">
+        <div style="font-size:3.9vh; margin-bottom:1.6vh;">📍</div>
+        <div style="font-size:1.8vh; font-weight:bold; margin-bottom:0.9vh;">Address</div>
+        <div style="font-size:1.6vh;">Mill Street, Bideford, Devon, EX39 2JR</div>
       </div>
 
     </div>
 
     <!-- Popup element -->
-    <div id="copy-popup" style="position:fixed; bottom:-100px; left:50%; transform:translateX(-50%); background:#1e40af; color:white; padding:15px 25px; border-radius:10px; font-weight:bold; font-size:16px; box-shadow:0 4px 12px rgba(0,0,0,0.2); transition: bottom 0.4s ease, opacity 0.4s ease; opacity:0; z-index:1000;"></div>
+    <div id="copy-popup" style="position:fixed; bottom:-9.9vh; left:50%; transform:translateX(-50%); background:#1e40af; color:white; padding:1.6vh 2.15vw; border-radius:0.6vw; font-weight:bold; font-size:1.6vh; box-shadow:0 0.41vh 1.2vh rgba(0,0,0,0.2); transition: bottom 0.4s ease, opacity 0.4s ease; opacity:0; z-index:1000;"></div>
   `;
 
   const cards = main.querySelectorAll('.contact-card');
@@ -556,12 +786,12 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
       navigator.clipboard.writeText(text).then(() => {
         // Show popup
         popup.textContent = `"${text}" Copied!`;
-        popup.style.bottom = '50px';
+        popup.style.bottom = '5.1vh';
         popup.style.opacity = '1';
 
         // Hide after 2 seconds
         setTimeout(() => {
-          popup.style.bottom = '-100px';
+          popup.style.bottom = '-9.9vh';
           popup.style.opacity = '0';
         }, 2000);
       });
@@ -569,12 +799,12 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
 
     // Optional: hover effect
     card.addEventListener('mouseover', () => {
-      card.style.transform = 'translateY(-5px)';
-      card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+      card.style.transform = 'translateY(-0.6vh)';
+      card.style.boxShadow = '0 1.1vh 2.1vh rgba(0,0,0,0.2)';
     });
     card.addEventListener('mouseout', () => {
       card.style.transform = 'translateY(0)';
-      card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+      card.style.boxShadow = '0 0.41vh 1.1vh rgba(0,0,0,0.1)';
     });
   });
 
@@ -595,50 +825,45 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
   `;
 
   // Add CSS dynamically
-  const style = document.createElement('style');
-  style.textContent = `
-    .links-title {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 30px;
-      color: #1e40af;
-    }
-    .links-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      max-width: 900px;
-      margin: auto;
-    }
-    .link-card {
-      flex: 1 1 250px;
-      text-decoration: none;
-      color: #1e40af;
-      background: #e0e7ff;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      font-size: 16px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .link-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-  `;
-  document.head.appendChild(style);
+const style = document.createElement('style');
+style.textContent = `
+  .links-title {
+    text-align: center;
+    font-size: 3.8vh;      
+    margin-bottom: 1.67vh; 
+    color: #1e40af;
+  }
+  .links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.04vw;           
+    justify-content: center;
+    max-width: 46.87vw;    
+    margin: auto;
+  }
+  .link-card {
+    flex: 1 1 13vw;        
+    text-decoration: none;
+    color: #1e40af;
+    background: #e0e7ff;
+    padding: 1.85vh;       
+    border-radius: 1.25vw; 
+    text-align: center;
+    font-size: 1.48vh;     
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .link-card:hover {
+    transform: translateY(-0.46vh);                 
+    box-shadow: 0 0.83vh 1.66vh rgba(0,0,0,0.2);   
+  }
+`;
+document.head.appendChild(style);
 
-} else if (page==='events')
+} else if (page === 'events') {
   main.innerHTML = `
-    <h1>Current Events</h1>
-    <div class="events-container" style="margin-top:30px;">
-      <div class="event-box" data-title="World Week of Prayer" data-description="Join us for daily Prayer Walks!">
-        World Week of Prayer
-      </div>
-    </div>
+    <h1 style="margin-bottom:2vh;">Current Events</h1>
+    <div class="events-container"></div>
 
-    <!-- Overlay for enlarged event -->
     <div id="eventOverlay">
       <div id="enlargedEvent">
         <h2 id="eventTitle"></h2>
@@ -647,32 +872,104 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
     </div>
   `;
 
-  // CSS dynamically
+  const events = [
+    {
+      date: "Every Sunday",
+      name: "Sunday Service",
+      description: "Join us every Sunday at 10.30am - 11.45am for our weekly Sunday service\nWe all connect as a group in our lighthouse room afterwards for some tea and biscuits."
+    },
+    {
+      date: "Every day EXCEPT Sundays",
+      name: "Quiet Space",
+      description: "Join us in the church from 10am - 12am for our daily (excluding Sunday) quiet space."
+    },
+    {
+      date: "Every Monday and Wednesday",
+      name: "Bible Study",
+      description: "Join us on a Monday or Wednesday to come and study the Bible with us.\n(MONDAY is 7pm - ~8pm)\n(WEDNESDAY is midday - ~1.30pm)"
+   
+    }
+  ];
+
+  const container = main.querySelector('.events-container');
+  events.forEach(event => {
+    const box = document.createElement('div');
+    box.className = 'event-box';
+
+    box.innerHTML = `
+      <div class="event-info">
+        <div class="event-date">${event.date}</div>
+        <div class="event-name">${event.name}</div>
+      </div>
+      <div class="event-view">View</div>
+    `;
+
+    box.dataset.title = event.name;
+    box.dataset.description = event.description;
+
+    container.appendChild(box);
+
+    // Only the View button is clickable
+    box.querySelector('.event-view').addEventListener('click', e => {
+      e.stopPropagation();
+      const overlay = document.getElementById('eventOverlay');
+      document.getElementById('eventTitle').textContent = event.name;
+      document.getElementById('eventDescription').textContent = event.description;
+      overlay.style.display = 'flex';
+      setTimeout(() => overlay.classList.add('show'), 10);
+    });
+  });
+
+  document.getElementById('eventOverlay').addEventListener('click', e => {
+    if (e.target.id === 'eventOverlay') {
+      e.target.classList.remove('show');
+      setTimeout(() => e.target.style.display = 'none', 300);
+    }
+  });
+
   const style = document.createElement('style');
   style.textContent = `
     .events-container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: flex-start;
-      margin-top: 20px;
+      flex-direction: column;
+      gap: 1.85vh;
+      margin-top: 1.85vh;
     }
     .event-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background: #e0f2ff;
-      color: #1d4ed8;
-      padding: 20px;
-      border-radius: 8px;
-      min-width: 180px;
-      max-width: 220px;
-      text-align: center;
-      cursor: pointer;
-      font-weight: 600;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-top: 20px;
+      padding: 1.85vh 2.78vw;
+      border-radius: 1vw;
+      min-height: 6vh;
     }
     .event-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 0.46vh 1vh rgba(0,0,0,0.1);
+    }
+    .event-date {
+      font-size: 1.67vh;
+      font-weight: 600;
+      margin-bottom: 0.46vh;
+    }
+    .event-name {
+      font-size: 1.85vh;
+      font-weight: bold;
+    }
+    .event-view {
+      background: #3b82f6;
+      color: white;
+      padding: 0.93vh 1.85vw;
+      border-radius: 0.52vw;
+      font-size: 1.67vh;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      min-width: 5vw;
+    }
+    .event-view:hover {
+      background: #2563eb;
     }
     #eventOverlay {
       display: none;
@@ -686,9 +983,9 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
     }
     #enlargedEvent {
       background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 500px;
+      padding: 2.78vh;
+      border-radius: 1vw;
+      max-width: 26vw;
       width: 80%;
       text-align: center;
       transform: scale(0);
@@ -698,98 +995,18 @@ We are a mixed bunch, from various walks of life, but we all feel privileged and
       transform: scale(1);
     }
     #enlargedEvent h2 {
-      margin-bottom: 15px;
-      font-size: 24px;
+      margin-bottom: 0.93vh;
+      font-size: 2.22vh;
     }
     #eventDescription {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      font-size: 18px;
-    }
-    .event-date {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #f0f9ff;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-weight: 500;
-    }
-    .event-date button {
-      padding: 5px 10px;
-      background: #3b82f6;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    .event-date button:hover {
-      background: #2563eb;
+      gap: 0.93vh;
+      font-size: 1.67vh;
     }
   `;
   document.head.appendChild(style);
-
-  // JS for click animation
-  const eventBox = main.querySelector('.event-box');
-  const overlay = document.getElementById('eventOverlay');
-  const enlarged = document.getElementById('enlargedEvent');
-  const title = document.getElementById('eventTitle');
-  const description = document.getElementById('eventDescription');
-
-  const prayerWalkDates = [
-    "2025-09-06",
-    "2025-09-07",
-    "2025-09-08",
-    "2025-09-09",
-    "2025-09-10",
-    "2025-09-11",
-    "2025-09-12",
-    "2025-09-13",
-    "2025-09-14"
-  ];
-
-  function formatDate(dateStr) {
-    const today = new Date();
-    const dateObj = new Date(dateStr);
-    const diff = (dateObj - new Date(today.getFullYear(), today.getMonth(), today.getDate())) / (1000*60*60*24);
-
-    if(diff === 0) return "Today";
-    if(diff === 1) return "Tomorrow";
-    if(diff === -1) return "Yesterday";
-
-    // format e.g., "6 Sep"
-    return dateObj.getDate() + " " + dateObj.toLocaleString('en-GB', { month: 'short' });
-  }
-
-  eventBox.addEventListener('click', () => {
-    title.innerText = eventBox.dataset.title;
-    description.innerHTML = ''; // clear previous
-
-    prayerWalkDates.forEach(date => {
-      const div = document.createElement('div');
-      div.className = 'event-date';
-      div.innerHTML = `<span>${formatDate(date)} - Prayer Walk</span><button>View</button>`;
-      div.querySelector('button').addEventListener('click', () => {
-        alert("Apologies for the inconvenience, but we are still working on the information for this event. We will be done soon!");
-      });
-      description.appendChild(div);
-    });
-
-    overlay.style.display = 'flex';
-    setTimeout(() => overlay.classList.add('show'), 10); // trigger scale animation
-  });
-
-  overlay.addEventListener('click', (e) => {
-    if(e.target === overlay){
-      overlay.classList.remove('show');
-      setTimeout(() => overlay.style.display='none', 300);
-    }
-  });
-}
-
-
+}}
 // Calendar rendering
 const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 let currentDate = new Date();
@@ -805,15 +1022,25 @@ const weekdayEvents = {
 };
 
 const specialEvents = {
-  "2025-09-06": "Prayer Walk",
-  "2025-09-07": "Prayer Walk",
-  "2025-09-08": "Prayer Walk",
-  "2025-09-09": "Prayer Walk",
-  "2025-09-10": "Prayer Walk",
-  "2025-09-11": "Prayer Walk",
-  "2025-09-12": "Prayer Walk",
-  "2025-09-13": "Prayer Walk",
-  "2025-09-14": "Prayer Walk"
+  "2025-09-06": ["Prayer Walk"],
+  "2025-09-07": ["Prayer Walk"],
+  "2025-09-08": ["Prayer Walk"],
+  "2025-09-09": ["Prayer Walk"],
+  "2025-09-10": ["Prayer Walk"],
+  "2025-09-11": ["Prayer Walk"],
+  "2025-09-12": ["Prayer Walk"],
+  "2025-09-13": ["Prayer Walk", "Bideford Carnival"],
+  "2025-09-14": ["Prayer Walk"],
+  "2025-09-25": ["Freshstreams Day"],
+  "2025-09-27": ["Harvest Weekend"],
+  "2025-09-28": ["Harvest Weekend"],
+  "2025-10-05": ["Torridge Baptist Celebration"],
+  "2025-10-11": ["Evening with Alan"],
+  "2025-11-09": ["Remembrance Day"],
+  "2025-12-20": ["Carol Singing"],
+  "2025-12-21": ["Carols by Candlelight"],
+  "2025-12-25": ["Christmas Morning"],
+  "2025-12-26": ["Boxing Day Lunch"]
 };
 
 function getOrdinal(n) {
@@ -851,24 +1078,39 @@ function renderCalendar() {
     const dateObj = new Date(year, month, d);
     const dateKey = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
 
-    // Highlight today
-    const today = new Date();
-    if(today.getFullYear()===year && today.getMonth()===month && today.getDate()===d){
-      dayDiv.style.backgroundColor = "#50C878"; // Emerald
-      dayDiv.style.color = "white";
-      dayDiv.style.fontWeight = "bold";
-      dayDiv.style.borderRadius = "5px";
-    }
+const today = new Date();
+if(today.getFullYear()===year && today.getMonth()===month && today.getDate()===d){
+  dayDiv.style.backgroundColor = "#50C878";
+  dayDiv.style.color = "white";
+  dayDiv.style.fontWeight = "bold";
+  dayDiv.style.borderRadius = "0.8vh";
+}
 
-    // Weekday events
-    if(weekdayEvents[dateObj.getDay()]){
-      dayDiv.innerHTML += `<div class="event">${weekdayEvents[dateObj.getDay()]}</div>`;
-    }
+if(weekdayEvents[dateObj.getDay()]){
+  const weekdayDiv = document.createElement("div");
+  weekdayDiv.className = "event";
+  weekdayDiv.textContent = weekdayEvents[dateObj.getDay()];
+  weekdayDiv.style.padding = "0.55vh 0.45vw";
+  weekdayDiv.style.marginTop = "1vh";
+  weekdayDiv.style.borderRadius = "0.8vh";
+  weekdayDiv.style.fontSize = "1.4vh";
+  weekdayDiv.style.textAlign = "center";
+  dayDiv.appendChild(weekdayDiv);
+}
 
-    // Special events
-    if(specialEvents[dateKey]){
-      dayDiv.innerHTML += `<div class="event">${specialEvents[dateKey]}</div>`;
-    }
+if(specialEvents[dateKey]){
+  specialEvents[dateKey].forEach(ev => {
+    const eventDiv = document.createElement("div");
+    eventDiv.className = "event";
+    eventDiv.textContent = ev;
+    eventDiv.style.padding = "0.55vh 0.45vw";
+    eventDiv.style.marginTop = "1vh";
+    eventDiv.style.borderRadius = "0.8vh";
+    eventDiv.style.fontSize = "1.4vh";
+    eventDiv.style.textAlign = "center";
+    dayDiv.appendChild(eventDiv);
+  });
+}
 
     // Click to display events
     dayDiv.addEventListener('click', ()=> {
