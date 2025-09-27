@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+.dudwauhdwadadcsadwa {
+  font-size: clamp(2rem, 0.9091rem + 4.3636vw, 5rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  interpolate-size: allow-keywords;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  font-family: "SUSE Mono", system-ui;
+}
+
+aside {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #090033;
+  gap: 0.8em;
+  padding-top: 1em;
+}
+aside a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+aside .sidepanel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-inline: 0.5em;
+}
+aside .sidepanel-header .navbar-brand {
+  font-size: clamp(1rem, 0.7455rem + 1.0182vw, 1.7rem);
+  font-weight: bold;
+  text-align: center;
+}
+aside .sidepanel-header .toggleNav {
+  display: none;
+}
+aside .navbar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+aside .navbar .searchbar {
+  color: white;
+  -moz-column-gap: 0.75em;
+       column-gap: 0.75em;
+  background: #002952;
+  padding: 0.7em;
+  margin-inline: 0.5em;
+  border-radius: 7.5vw;
+  display: flex;
+  width: 2.45em;
+  transition: width 0.5s;
+}
+aside .navbar .searchbar.active {
+  width: auto;
+}
+aside .navbar .searchbar:focus-within {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+aside .navbar .searchbar .icon {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+aside .navbar .searchbar input {
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+}
+aside .navbar .bottom-link {
+  margin-top: auto;
+  text-align: center;
+  padding-block: 1em;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+aside .navbar .mainmenu {
+  display: flex;
+  flex-direction: column;
+}
+aside .navbar .mainmenu .submenu {
+  display: none;
+  height: 0;
+  overflow: clip;
+  opacity: 0;
+  transition: height 0.5s, display 0.5s, opacity 0.5s;
+  transition-behavior: allow-discrete;
+  background: #161132;
+}
+aside .navbar .mainmenu .submenu li a {
+  padding: 1em;
+}
+aside .navbar .mainmenu > li:has(.submenu) > a::after {
+  content: "";
+  font-family: FontAwesome;
+  margin-left: auto;
+  transition: rotate 0.5s;
+}
+aside .navbar .mainmenu > li:has(.submenu.active) > a::after {
+  rotate: 90deg;
+}
+aside .navbar .mainmenu > li > a {
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  transition: padding 0.5s;
+}
+aside .navbar .mainmenu > li:hover > a {
+  padding-left: 2em;
+}
+aside .navbar .mainmenu > li .submenu.active {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+@starting-style {
+  aside .navbar .mainmenu > li .submenu.active {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  isolation: isolate;
+  background: white;
+}
+main::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(#331a00, white) center/cover no-repeat, url(https://aicdn.picsart.com/953a8737-ef9e-4601-b8b9-1fe74f6b8fe1.jpg) center/cover no-repeat;
+  background-blend-mode: overlay;
+  opacity: 0.5;
+  z-index: -1;
+}
+main .main-title {
+  text-align: center;
+}
+main .main-title .title {
+  font-size: clamp(1.3rem, 0.8636rem + 1.7455vw, 2.5rem);
+  font-weight: bold;
+}
+main .main-title .subtext {
+  font-size: clamp(0.8rem, 0.5455rem + 1.0182vw, 1.5rem);
+  padding: 10px;
+}
+main .main-content {
+  flex: 1;
+  display: grid;
+  margin-right: 2rem;
+  margin-bottom: 8rem;
+  place-items: center;
+}
+main .main-content img {
+  width: min(300px, 100%);
+  aspect-ratio: 400/304;
+}
+main .main-footer {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (width <= 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  aside {
+    flex-direction: initial;
+    width: initial;
+    padding-block: 0.5em;
+    position: relative;
+  }
+  aside .sidepanel-header {
+    flex-direction: initial;
+    justify-content: space-between;
+    flex: 1;
+  }
+  aside .sidepanel-header .navbar-brand {
+    align-content: center;
+  }
+  aside .sidepanel-header .toggleNav {
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  aside .navbar {
+    position: absolute;
+    top: 100%;
+    background: #0b0040;
+    display: none;
+    inset-inline: 0;
+    height: 0;
+    overflow: clip;
+    opacity: 0;
+    transition: height 0.5s, display 0.5s, opacity 0.5s;
+    transition-behavior: allow-discrete;
+    z-index: 1;
+  }
+  aside .navbar .searchbar {
+    -webkit-margin-before: 1em;
+            margin-block-start: 1em;
+    background: #002e5c;
+  }
+  aside .navbar.active {
+    display: block;
+    height: auto;
+    opacity: 1;
+  }
+  @starting-style {
+    aside .navbar.active {
+      height: 0;
+      opacity: 0;
+    }
+  }
+}
