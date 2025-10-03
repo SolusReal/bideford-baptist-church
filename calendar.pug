@@ -1,0 +1,18 @@
+extends layout/_base.pug
+
+block title
+  title Bideford Baptist Church | Calendar
+
+block content
+  .calendar
+    .headers
+      .day Monday
+      .day Tuesday
+      .day Wednesday
+      .day Thursday
+      .day Friday
+      .day Saturday
+      .day Sunday
+    .body
+      - for(let i = 0; i < 30; i++)
+        .day #{i+1}
