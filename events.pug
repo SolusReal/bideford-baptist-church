@@ -1,12 +1,26 @@
 extends layout/_base.pug
+
 block title
   title Bideford Baptist Church | Events
+
 block content
-  .main-title
-    h1.title Upcomming Events
-  .pagecontent 
-    p Torridge Baptist Celebration - 05/10/2025<br>Starts at 18:30
+  .events
+    .main-title
+      h1.title Upcoming Events
+    .pagecontent(style="--event-bg: rgba(255,255,255,0.95); --event-text: #000;")
+      //- Event 1
+      .event-container
+        p.event Torridge Baptist Celebration - 05/10/2025<br>Starts at 18:30
+        .event-details This is the Torridge Baptist Celebration.
 
-    p Evening with Alan - 11/10/2025<br>Starts at 19:00
+      //- Event 2
+      .event-container
+        p.event Evening with Alan - 11/10/2025<br>Starts at 19:00
+        .event-details 
+          p This is our Evening with Alan, view more details in the linked poster below:
+            img.event-img(src="an-evening-with-alan-poster.png", alt="Evening with Alan Poster")
 
-    p Remembrance Day Service - 09/11/2025<br>10:30 to 11:45
+      //- Event 3
+      .event-container
+        p.event Remembrance Day Service - 09/11/2025<br>10:30 to 11:45
+        .event-details This is our Remembrance Day Service.
