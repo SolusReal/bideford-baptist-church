@@ -8,7 +8,6 @@
   }
   @return $value;
 }
-
 @function fz($mivw: 400px, $mavw: 1500px, $mifz: 1rem, $mafz: 4rem) {
   $min-font-px: strip-unit(rem-to-px($mifz));
   $max-font-px: strip-unit(rem-to-px($mafz));
