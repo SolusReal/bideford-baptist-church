@@ -12,4 +12,5 @@ if (pugFiles) {
   execSync(`pug ${pugFiles} --out .`, { stdio: 'inherit' });
 } else {
   console.log('No .pug files found in root directory');
+
 }
