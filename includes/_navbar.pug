@@ -1,0 +1,77 @@
+-
+  const menuLinks = [
+    {
+      name:"Home", 
+      icon:"home", 
+      link:"index.html"
+    },
+    {
+      name:"About Us", 
+      icon:"circle-info", 
+      link:"about-us.html", 
+      submenu: [
+        {name:"Our Pastor", link:"our-pastor.html"},
+        {name:"The Deacons", link:"meet-the-deacons.html"}
+      ]
+    },
+    {
+      name:"Gallery", 
+      icon:"images", 
+      link:"#", 
+      submenu: [
+        {name:"Images", link:"images.html"},
+        {name:"Videos", link:"videos.html"},
+        {name:"Sermons", link:"sermons.html"}
+      ]
+    },
+    {
+      name:"Calendar", 
+      icon:"calendar-days", 
+      link:"calendar.html"
+    },
+    {
+      name:"Events", 
+      icon:"bullhorn", 
+      link:"events.html"
+    },
+    {
+      name:"Resources", 
+      icon:"folder-open", 
+      link:"resources.html"
+    },
+    {
+      name:"Devotional", 
+      icon:"book-open", 
+      link:"devotional.html"
+    },
+    {
+      name:"Vision & Christian Living", 
+      icon:"lightbulb", 
+      link:"vision-and-christian-living"
+    },
+    {
+      name:"Links", 
+      icon:"link", 
+      link:"links.html"
+    }
+  ]
+aside
+  .sidepanel-header
+    a.navbar-brand(href="#") Bideford Baptist Church
+    button.toggleNav.fa-solid.fa-bars
+  nav.navbar
+    label.searchbar
+      .icon.fa-solid.fa-magnifying-glass
+      input(type="text")
+    ul.mainmenu
+      each link in menuLinks
+        li
+          a(href=link.link)
+            i.fa-solid(class=`fa-${link.icon}`)
+            span #{link.name}
+          if link.submenu
+            ul.submenu
+              each sublink in link.submenu
+                li
+                  a(href=sublink.link) #{sublink.name}
+    a.bottom-link(href="#") Contact Us
