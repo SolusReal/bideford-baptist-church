@@ -1,3 +1,8 @@
+const toggleNav = document.querySelector(".toggleNav")
+const navbar = document.querySelector(".navbar")
+toggleNav.addEventListener("click", event => {
+  navbar.classList.toggle("active")
+})
 document.addEventListener("DOMContentLoaded", () => {
   const submenuToggle = document.querySelectorAll(".mainmenu > li.has-submenu > a");
 
