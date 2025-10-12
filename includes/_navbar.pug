@@ -62,10 +62,11 @@ aside
   nav.navbar
     label.searchbar
       .icon.fa-solid.fa-magnifying-glass
-      input(type="text")
+      input(type="text" placeholder="Search...")
     ul.mainmenu
       each link in menuLinks
-        li
+        - const hasSub = link.submenu ? 'has-submenu' : ''
+        li(class=hasSub)
           a(href=link.link)
             i.fa-solid(class=`fa-${link.icon}`)
             span #{link.name}

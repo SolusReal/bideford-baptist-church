@@ -235,7 +235,7 @@ main {
       color: hsl(210 100% 20%);
       font-size: fz(400px, 1500px, 2rem, 4rem);
       font-weight: bold;
-      font-family: system-ui;
+      font-family: var(--font-title);
       padding-bottom: 10px;
     }
 
@@ -258,7 +258,7 @@ main {
       color: hsl(210 100 20%);
       font-size: fz(400px, 1500px, 2rem, 4rem);
       font-weight: bold;
-      font-family: "Roboto Condensed";
+      font-family: var(--font-title);
       padding-bottom: 10px;
     }
   img.deacons {
@@ -300,7 +300,7 @@ main {
       color: hsl(210 100 20%);
       font-size: fz(400px, 1500px, 2rem, 4rem);
       font-weight: bold;
-      font-family: system-ui;
+      font-family: var(--font-title);
       padding-bottom: 10px;
     }
   }
@@ -447,7 +447,7 @@ a:hover img {
       color: hsl(210 100 20%);
       font-size: fz(400px, 1500px, 2rem, 4rem);
       font-weight: bold;
-      font-family: "Roboto Condensed";
+      font-family: var(--font-title);
       padding-bottom: 10px;
     }
 
@@ -458,10 +458,10 @@ a:hover img {
     .h1-first,
     .h1-second,
     .h1-third,
-    .h1-last {
+    .h2-last {
       font-size: fz(400, 1500, 1rem, 2rem);
       font-weight: bold;
-      color: hsl(0 0 20%);
+      color: hsl(0, 0%, 20%);
       padding-top: 1em;
       padding-left: 0.5em;
     }
@@ -476,7 +476,8 @@ a:hover img {
 
     .text-first,
     .text-second,
-    .text-third {
+    .text-third,
+    .text-last {
       font-size: fz(400, 1500, 0.8rem, 1.1rem);
       font-weight: normal;
       color: hsl(0 0 0%);

@@ -269,7 +269,7 @@ main .welcoming {
   color: hsl(210, 100%, 20%);
   font-size: clamp(2rem, 1.2727rem + 2.9091vw, 4rem);
   font-weight: bold;
-  font-family: system-ui;
+  font-family: var(--font-title);
   padding-bottom: 10px;
 }
 .our-pastor .randombox img {
@@ -287,7 +287,7 @@ main .welcoming {
   color: hsl(210, 100%, 20%);
   font-size: clamp(2rem, 1.2727rem + 2.9091vw, 4rem);
   font-weight: bold;
-  font-family: "Roboto Condensed";
+  font-family: var(--font-title);
   padding-bottom: 10px;
 }
 .the-deacons .randombox img.deacons {
@@ -327,7 +327,7 @@ main .welcoming {
   color: hsl(210, 100%, 20%);
   font-size: clamp(2rem, 1.2727rem + 2.9091vw, 4rem);
   font-weight: bold;
-  font-family: system-ui;
+  font-family: var(--font-title);
   padding-bottom: 10px;
 }
 
@@ -476,7 +476,7 @@ a:hover img {
   color: hsl(210, 100%, 20%);
   font-size: clamp(2rem, 1.2727rem + 2.9091vw, 4rem);
   font-weight: bold;
-  font-family: "Roboto Condensed";
+  font-family: var(--font-title);
   padding-bottom: 10px;
 }
 .resources .randombox .textContent {
@@ -485,7 +485,7 @@ a:hover img {
 .resources .randombox .h1-first,
 .resources .randombox .h1-second,
 .resources .randombox .h1-third,
-.resources .randombox .h1-last {
+.resources .randombox .h2-last {
   font-size: clamp(1rem, 0.6364rem + 1.4545vw, 2rem);
   font-weight: bold;
   color: hsl(0, 0%, 20%);
@@ -501,7 +501,8 @@ a:hover img {
 }
 .resources .randombox .text-first,
 .resources .randombox .text-second,
-.resources .randombox .text-third {
+.resources .randombox .text-third,
+.resources .randombox .text-last {
   font-size: clamp(0.8rem, 0.6909rem + 0.4364vw, 1.1rem);
   font-weight: normal;
   color: hsl(0, 0%, 0%);
