@@ -1,9 +1,22 @@
 extends layout/_base.pug
+
 block title
-  title Bideford Baptist Church | Home
+  title Bideford Baptist Church | Contact us
+
 block content
-  .main-title
-    h1.title Bideford Baptist Church
-    .subtext The house that welcomes, loves, and accepts us exactly as we are.
-  .main-content
-  .welcoming Welcome home
+  .contact-us
+    main
+      .randombox.contact
+        .boxtitle Contact Us
+        .textContent
+          form.contact-form(action="#" method="post")
+            label(for="name") Name (So we can address you.)
+            input#name(type="text" placeholder="Your Name" required)
+            
+            label(for="email") Email (So we can reply to your message.)
+            input#email(type="email" placeholder="you@example.com" required)
+            
+            label(for="message") Message
+            textarea#message(placeholder="Your message..." required)
+            
+            button(type="submit") Send Message
