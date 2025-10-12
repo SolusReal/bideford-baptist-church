@@ -510,7 +510,7 @@ a:hover img {
   /* Title stays blue */
   h1.title {
     font-size: fz(400px, 1500px, 22px, 36px);
-    color: hsl(210 100% 50%);
+    color: hsl(210 100 20%);  
   }
 
   /* Event text and details background */
@@ -566,27 +566,121 @@ a:hover img {
     border-radius: fz(400px, 1500px, 4px, 8px);
   }
 }
+.contact-us {
+  main {
+    font-size: clamp(14px, 0.7841rem + 0.3636vw, 18px);
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(12px, 0.5682rem + 0.7273vw, 20px);
+    position: relative;
+    isolation: isolate;
+    background: transparent;
 
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay-gradient), var(--bg-image) center / cover no-repeat;
+      background-blend-mode: overlay;
+      opacity: 0.5;
+      z-index: -1;
+    }
 
+    .randombox.contact {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: clamp(16px, 0.7273rem + 0.7273vw, 24px);
+      background: transparent;
 
+      .boxtitle {
+        width: 100%;
+        text-align: center;
+        color: hsl(210 100 20%);
+        font-family: var(--font-title);
+        font-weight: bold;
+        font-size: clamp(22px, 1.0568rem + 1.2727vw, 36px);
+        padding-bottom: clamp(8px, 0.3636rem + 0.5455vw, 16px);
+      }
 
+      .textContent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
+        .contact-form {
+          width: 100%;
+          max-width: 600px;
+          display: flex;
+          flex-direction: column;
+          gap: clamp(8px, 0.3636rem + 0.5455vw, 16px);
+          background: transparent;
 
+          label,
+          input,
+          textarea,
+          button {
+            font-size: clamp(14px, 0.7841rem + 0.3636vw, 18px);
+          }
 
+          label {
+            font-weight: bold;
+            color: var(--label-color, #000000);
+          }
 
+          input,
+          textarea {
+            padding: clamp(6px, 0.2386rem + 0.5455vw, 12px)
+              clamp(10px, 0.4545rem + 0.7273vw, 18px);
+            border: 1px solid var(--border-color, #444);
+            border-radius: clamp(4px, 0.1591rem + 0.3636vw, 8px);
+            font-family: var(--font-mono);
+            outline: none;
+            width: 100%;
+            background: hsl(0, 0%, 20%);
+            color: #ffffff;
+            transition: border-color 0.3s ease, background 0.3s ease;
 
+            &:focus {
+              border-color: hsl(210, 100%, 50%);
+              background: hsl(0, 0%, 25%);
+            }
+          }
 
+          textarea {
+            resize: vertical;
+            min-height: clamp(100px, 6vw, 160px);
+          }
 
+          button {
+            padding: clamp(8px, 0.3636rem + 0.7273vw, 16px)
+              clamp(16px, 0.7273rem + 1.4545vw, 28px);
+            background: hsl(210, 100%, 50%);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: clamp(4px, 0.1591rem + 0.3636vw, 8px);
+            cursor: pointer;
+            transition: filter 0.3s ease, background 0.3s ease;
+            box-shadow: 0 clamp(2px, 0.0795rem + 0.1818vw, 4px)
+              clamp(4px, 0.1591rem + 0.3636vw, 8px) rgba(0, 0, 0, 0.4);
 
-
-
-
-
-
-
-
-
-
+            &:hover {
+              filter: brightness(1.05);
+              background: hsl(210, 100%, 40%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
 @media screen and (width <= 1000px) {
@@ -626,7 +720,6 @@ a:hover img {
       overflow:clip;
       opacity:0;
       transition: height .5s, display .5s, opacity .5s;
-      transition-behavior: allow-discrete;
       z-index:1;
       .searchbar {
         margin-block-start:1em;
@@ -643,4 +736,4 @@ a:hover img {
       }
     }
   }
-}
+}/*# sourceMappingURL=main.css.map */
