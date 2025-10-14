@@ -426,7 +426,7 @@ a:hover img {
   padding: 0.5em 1em;
   font-size: fz(400, 1500, 0.8rem, 1.25rem);
   font-weight: bold;
-  background-color: hsl(175 50 47%);
+  background-color: hsl(138, 26%, 56%);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -503,7 +503,18 @@ a:hover img {
   }
 }
 /* -------------------- EVENTS -------------------- */
-.events {
+.january-events,
+.february-events,
+.march-events,
+.april-events,
+.may-events,
+.june-events,
+.july-events,
+.august-events,
+.september-events,
+.october-events,
+.november-events,
+.december-events {
   .pagecontent {
     font-size: fz(400px, 1500px, 14px, 18px);
   }
@@ -523,7 +534,6 @@ a:hover img {
 
   .event-container {
     position: relative;
-    margin-bottom: fz(400px, 1500px, 12px, 20px);
     cursor: pointer;
     font-size: fz(400px, 1500px, 14px, 18px);
   }

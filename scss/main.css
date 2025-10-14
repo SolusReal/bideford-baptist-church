@@ -457,7 +457,7 @@ a:hover img {
   padding: 0.5em 1em;
   font-size: clamp(0.8rem, 0.6364rem + 0.6545vw, 1.25rem);
   font-weight: bold;
-  background-color: hsl(175, 50%, 47%);
+  background-color: hsl(138, 26%, 56%);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -525,39 +525,137 @@ a:hover img {
 }
 
 /* -------------------- EVENTS -------------------- */
-.events {
+.january-events,
+.february-events,
+.march-events,
+.april-events,
+.may-events,
+.june-events,
+.july-events,
+.august-events,
+.september-events,
+.october-events,
+.november-events,
+.december-events {
   /* Title stays blue */
   /* Event text and details background */
 }
-.events .pagecontent {
+.january-events .pagecontent,
+.february-events .pagecontent,
+.march-events .pagecontent,
+.april-events .pagecontent,
+.may-events .pagecontent,
+.june-events .pagecontent,
+.july-events .pagecontent,
+.august-events .pagecontent,
+.september-events .pagecontent,
+.october-events .pagecontent,
+.november-events .pagecontent,
+.december-events .pagecontent {
   font-size: clamp(14px, 0.7841rem + 0.3636vw, 18px);
 }
-.events h1.title {
+.january-events h1.title,
+.february-events h1.title,
+.march-events h1.title,
+.april-events h1.title,
+.may-events h1.title,
+.june-events h1.title,
+.july-events h1.title,
+.august-events h1.title,
+.september-events h1.title,
+.october-events h1.title,
+.november-events h1.title,
+.december-events h1.title {
   font-size: clamp(22px, 1.0568rem + 1.2727vw, 36px);
   color: hsl(210, 100%, 20%);
 }
-.events .event,
-.events .event-details {
+.january-events .event,
+.january-events .event-details,
+.february-events .event,
+.february-events .event-details,
+.march-events .event,
+.march-events .event-details,
+.april-events .event,
+.april-events .event-details,
+.may-events .event,
+.may-events .event-details,
+.june-events .event,
+.june-events .event-details,
+.july-events .event,
+.july-events .event-details,
+.august-events .event,
+.august-events .event-details,
+.september-events .event,
+.september-events .event-details,
+.october-events .event,
+.october-events .event-details,
+.november-events .event,
+.november-events .event-details,
+.december-events .event,
+.december-events .event-details {
   background: hsl(0, 0%, 20%);
   color: #ffffff;
 }
-.events .event-container {
+.january-events .event-container,
+.february-events .event-container,
+.march-events .event-container,
+.april-events .event-container,
+.may-events .event-container,
+.june-events .event-container,
+.july-events .event-container,
+.august-events .event-container,
+.september-events .event-container,
+.october-events .event-container,
+.november-events .event-container,
+.december-events .event-container {
   position: relative;
-  margin-bottom: clamp(12px, 0.5682rem + 0.7273vw, 20px);
   cursor: pointer;
   font-size: clamp(14px, 0.7841rem + 0.3636vw, 18px);
 }
-.events .event {
+.january-events .event,
+.february-events .event,
+.march-events .event,
+.april-events .event,
+.may-events .event,
+.june-events .event,
+.july-events .event,
+.august-events .event,
+.september-events .event,
+.october-events .event,
+.november-events .event,
+.december-events .event {
   padding: clamp(6px, 0.2386rem + 0.5455vw, 12px);
   border-radius: clamp(4px, 0.1591rem + 0.3636vw, 8px);
   box-shadow: 0 clamp(2px, 0.0795rem + 0.1818vw, 4px) clamp(4px, 0.1591rem + 0.3636vw, 8px) rgba(0, 0, 0, 0.4);
   margin: 0;
   transition: filter 0.2s ease;
 }
-.events .event-container:hover .event {
+.january-events .event-container:hover .event,
+.february-events .event-container:hover .event,
+.march-events .event-container:hover .event,
+.april-events .event-container:hover .event,
+.may-events .event-container:hover .event,
+.june-events .event-container:hover .event,
+.july-events .event-container:hover .event,
+.august-events .event-container:hover .event,
+.september-events .event-container:hover .event,
+.october-events .event-container:hover .event,
+.november-events .event-container:hover .event,
+.december-events .event-container:hover .event {
   filter: brightness(1.02);
 }
-.events .event-details {
+.january-events .event-details,
+.february-events .event-details,
+.march-events .event-details,
+.april-events .event-details,
+.may-events .event-details,
+.june-events .event-details,
+.july-events .event-details,
+.august-events .event-details,
+.september-events .event-details,
+.october-events .event-details,
+.november-events .event-details,
+.december-events .event-details {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -568,12 +666,34 @@ a:hover img {
   margin-top: clamp(4px, 0.1591rem + 0.3636vw, 8px);
   background-clip: padding-box;
 }
-.events .event-container:hover .event-details {
+.january-events .event-container:hover .event-details,
+.february-events .event-container:hover .event-details,
+.march-events .event-container:hover .event-details,
+.april-events .event-container:hover .event-details,
+.may-events .event-container:hover .event-details,
+.june-events .event-container:hover .event-details,
+.july-events .event-container:hover .event-details,
+.august-events .event-container:hover .event-details,
+.september-events .event-container:hover .event-details,
+.october-events .event-container:hover .event-details,
+.november-events .event-container:hover .event-details,
+.december-events .event-container:hover .event-details {
   max-height: 600px;
   opacity: 1;
   padding: clamp(6px, 0.2386rem + 0.5455vw, 12px);
 }
-.events .event-img {
+.january-events .event-img,
+.february-events .event-img,
+.march-events .event-img,
+.april-events .event-img,
+.may-events .event-img,
+.june-events .event-img,
+.july-events .event-img,
+.august-events .event-img,
+.september-events .event-img,
+.october-events .event-img,
+.november-events .event-img,
+.december-events .event-img {
   display: block;
   width: 250px;
   max-width: 100%;
