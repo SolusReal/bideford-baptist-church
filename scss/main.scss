@@ -152,7 +152,7 @@ main {
     inset:0;
     background:
       linear-gradient(hsl(30 100% 10%), white) center / cover no-repeat,
-      url(https://aicdn.picsart.com/953a8737-ef9e-4601-b8b9-1fe74f6b8fe1.jpg) center / cover no-repeat;
+      url(https://aicdn.picsart.com/17755a9b-7564-4796-b0a7-e082d6d67608.jpg) center / cover no-repeat;
     background-blend-mode:overlay;
     opacity:0.50;
     z-index:-1;
@@ -189,13 +189,27 @@ main {
     justify-content: start;
   }
   .welcoming {
-    font-size: 2.5rem;
+    font-size: fz(400px, 1500px, 2rem, 2.5rem);
     font-family: "Noto Serif";
-    color: hsl(280 100 30%);
+    color: hsl(305, 100%, 23%);
     text-align:center;
-    padding-bottom: 22rem;
-    padding-right: 2.5rem;
+    padding-bottom: 20rem;
+    padding-right: 4rem;
     font-weight: bold;
+  }
+  .times {
+    font-size: fz(400px, 1500px, 1rem, 1.5rem);
+    font-family: system-ui;
+    color: hsl(0, 0%, 30%);
+    text-align: center;
+    font-weight: bold;
+  }
+  .address {
+    font-size: fz(400px, 1500px, 1rem, 1.5rem);
+    font-family: system-ui;
+    color: hsl(165, 35%, 50%);
+    font-weight: bold;
+    text-align: right;
   }
 }
 .calendar {
@@ -581,7 +595,7 @@ a:hover img {
   main {
     font-size: clamp(14px, 0.7841rem + 0.3636vw, 18px);
     flex: 1;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     padding: clamp(12px, 0.5682rem + 0.7273vw, 20px);
@@ -606,7 +620,7 @@ a:hover img {
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-      min-height: 100vh;
+      min-height: auto;
       padding: clamp(16px, 0.7273rem + 0.7273vw, 24px);
       background: transparent;
 
@@ -666,7 +680,7 @@ a:hover img {
 
           textarea {
             resize: vertical;
-            min-height: clamp(100px, 6vw, 160px);
+            min-height: auto;
           }
 
           button {
@@ -690,6 +704,13 @@ a:hover img {
         }
       }
     }
+  }
+  .emailaddresses {
+    margin-top: 7em;
+    text-align: center;
+    font-size: fz(400, 1500, 2rem, 2.5rem);
+    color: hsl(0, 0%, 30%);
+    font-family: "SUSE Mono";
   }
 }
 
