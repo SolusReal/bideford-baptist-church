@@ -584,7 +584,7 @@ a:hover img {
 
   .event-img {
     display: block;
-    max-width: 250px;
+    max-width: fz(400px, 1500px, 125px, 250px);
     height: auto;
     margin: fz(400px, 1500px, 6px, 12px) auto;
     border-radius: fz(400px, 1500px, 4px, 8px);

@@ -709,7 +709,7 @@ a:hover img {
 .november-events .event-img,
 .december-events .event-img {
   display: block;
-  max-width: 250px;
+  max-width: clamp(125px, 4.9716rem + 11.3636vw, 250px);
   height: auto;
   margin: clamp(6px, 0.2386rem + 0.5455vw, 12px) auto;
   border-radius: clamp(4px, 0.1591rem + 0.3636vw, 8px);
