@@ -822,18 +822,26 @@ a:hover img {
   font-family: "SUSE Mono";
 }
 
+.vision-and-christian-living .boxtitle {
+  text-align: center;
+  color: hsl(210, 100%, 20%);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 1em;
+}
 .vision-and-christian-living .mission .intro {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   line-height: 1.6;
   margin-bottom: 0.5em;
 }
-.vision-and-christian-living .mission .bullets {
+.vision-and-christian-living .mission ul.bullets {
   list-style: disc;
   padding-left: 2em;
   margin: 0;
 }
-.vision-and-christian-living .mission .bullets li {
-  font-size: 1rem;
+.vision-and-christian-living .mission ul.bullets li {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   line-height: 1.5;
   margin-bottom: 0.25em;
   color: hsl(20, 0%, 9%);
@@ -871,7 +879,7 @@ a:hover img {
 .vision-and-christian-living img.third-image {
   display: block;
   max-width: 400px;
-  max-height: 300px;
+  width: 100%;
   height: auto;
   margin: 1em auto;
   padding-left: 0;
