@@ -822,6 +822,91 @@ a:hover img {
   font-family: "SUSE Mono";
 }
 
+.vision-and-christian-living .mission .intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5em;
+}
+.vision-and-christian-living .mission .bullets {
+  list-style: disc;
+  padding-left: 2em;
+  margin: 0;
+}
+.vision-and-christian-living .mission .bullets li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.25em;
+  color: hsl(20, 0%, 9%);
+}
+.vision-and-christian-living .first-title,
+.vision-and-christian-living .second-title,
+.vision-and-christian-living .third-title,
+.vision-and-christian-living .fourth-title,
+.vision-and-christian-living .fifth-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+.vision-and-christian-living .first-text,
+.vision-and-christian-living .second-text,
+.vision-and-christian-living .third-text,
+.vision-and-christian-living .fourth-text,
+.vision-and-christian-living .fifth-text {
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: left;
+}
+.vision-and-christian-living .first-text .red,
+.vision-and-christian-living .second-text .red,
+.vision-and-christian-living .third-text .red,
+.vision-and-christian-living .fourth-text .red,
+.vision-and-christian-living .fifth-text .red {
+  color: red;
+}
+.vision-and-christian-living img.first-image,
+.vision-and-christian-living img.second-image,
+.vision-and-christian-living img.third-image {
+  display: block;
+  max-width: 400px;
+  max-height: 300px;
+  height: auto;
+  margin: 1em auto;
+  padding-left: 0;
+}
+
+/* Responsive tweaks for smaller screens */
+@media screen and (max-width: 1000px) {
+  .vision-and-christian-living .first-image,
+  .vision-and-christian-living .second-image,
+  .vision-and-christian-living .third-image {
+    padding-left: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .vision-and-christian-living .boxtitle {
+    font-size: clamp(1.5rem, 0.9545rem + 2.1818vw, 3rem);
+  }
+  .vision-and-christian-living .first-title,
+  .vision-and-christian-living .second-title,
+  .vision-and-christian-living .third-title,
+  .vision-and-christian-living .fourth-title,
+  .vision-and-christian-living .fifth-title {
+    font-size: clamp(0.9rem, 0.5727rem + 1.3091vw, 1.8rem);
+  }
+  .vision-and-christian-living .first-text,
+  .vision-and-christian-living .second-text,
+  .vision-and-christian-living .third-text,
+  .vision-and-christian-living .fourth-text,
+  .vision-and-christian-living .fifth-text {
+    font-size: clamp(0.7rem, 0.5182rem + 0.7273vw, 1.2rem);
+  }
+  .vision-and-christian-living .bullet {
+    font-size: clamp(0.8rem, 0.6545rem + 0.5818vw, 1.2rem);
+  }
+}
 @media screen and (width <= 1000px) {
   body {
     flex-direction: column;

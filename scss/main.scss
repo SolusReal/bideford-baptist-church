@@ -712,6 +712,330 @@ a:hover img {
     font-family: "SUSE Mono";
   }
 }
+.vision-and-christian-living {
+
+  // Mission / bullets
+  .mission {
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5em;
+    }
+
+    .bullets {
+      list-style: disc;
+      padding-left: 2em;
+      margin: 0;
+
+      li {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.25em;
+        color: hsl(20, 0%, 9%);
+      }
+    }
+  }
+
+  // Section titles
+  .first-title,
+  .second-title,
+  .third-title,
+  .fourth-title,
+  .fifth-title {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+  }
+
+  // Section texts
+  .first-text,
+  .second-text,
+  .third-text,
+  .fourth-text,
+  .fifth-text {
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    margin-bottom: 1em;
+    text-align: left;
+
+    .red {
+      color: red;
+    }
+  }
+
+  // Images
+  img.first-image,
+  img.second-image,
+  img.third-image {
+    display: block;
+    max-width: 400px;
+    max-height: 300px;
+    height: auto;
+    margin: 1em auto;  // center the images
+    padding-left: 0;   // remove any extra padding
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive tweaks for smaller screens */
+@media screen and (max-width: 1000px) {
+  .vision-and-christian-living {
+    .first-image,
+    .second-image,
+    .third-image {
+      padding-left: 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .boxtitle {
+      font-size: fz(400px, 1500px, 1.5rem, 3rem);
+    }
+
+    .first-title,
+    .second-title,
+    .third-title,
+    .fourth-title,
+    .fifth-title {
+      font-size: fz(400px, 1500px, 0.9rem, 1.8rem);
+    }
+
+    .first-text,
+    .second-text,
+    .third-text,
+    .fourth-text,
+    .fifth-text {
+      font-size: fz(400px, 1500px, 0.7rem, 1.2rem);
+    }
+
+    .bullet {
+      font-size: fz(400px, 1500px, 0.8rem, 1.2rem);
+    }
+  }
+}
 
 
 @media screen and (width <= 1000px) {
