@@ -787,6 +787,62 @@ a:hover img {
     padding-left: 0;
   }
 }
+.images {
+  display: flex;
+  flex-wrap: wrap;          // allow images to wrap to new line
+  justify-content: center;  // center the images
+  gap: 1em;                 // spacing between images
+  margin-top: 2em;
+
+  > img {
+    width: calc((100% - 4em) / 6); // 5 images per row max, with gap accounted for
+    max-width: 200px;              // prevent images from being too big
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  }
+}
+
+
+/* Overlay container */
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  > img {
+    width: calc(100vw - 100px);   // viewport width minus 100px
+    max-width: 1200px;             // optional cap
+    height: calc(100vh - 50px);    // viewport height minus 50px
+    object-fit: contain;
+    border-radius: 0.5em;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: zoomFade 0.25s forwards ease;
+  }
+}
+
+@keyframes zoomFade {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+
+
 
 
 

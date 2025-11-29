@@ -85,3 +85,17 @@ document.addEventListener("DOMContentLoaded", () => {
       showMessage("Error sending message.", false);
     }
   });
+const images = document.querySelectorAll('.images > img');
+const overlay = document.getElementById('overlay');
+const overlayImg = overlay.querySelector('img');
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    overlayImg.src = img.src;
+    overlay.style.display = 'flex';
+  });
+});
+
+overlay.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
