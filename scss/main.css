@@ -191,7 +191,7 @@ main::before {
   position: absolute;
   content: "";
   inset: 0;
-  background: linear-gradient(hsl(30, 100%, 10%), white) center/cover no-repeat, url(https://aicdn.picsart.com/17755a9b-7564-4796-b0a7-e082d6d67608.jpg) center/cover no-repeat;
+  background: linear-gradient(hsl(30, 100%, 10%), white) center/cover no-repeat, url(../images/background.png) center/cover no-repeat;
   background-blend-mode: overlay;
   opacity: 0.5;
   z-index: -1;
@@ -718,7 +718,6 @@ a:hover img {
 .contact-us main {
   font-size: clamp(14px, 0.7841rem + 0.3636vw, 18px);
   flex: 1;
-  min-height: auto;
   display: flex;
   flex-direction: column;
   padding: clamp(12px, 0.5682rem + 0.7273vw, 20px);
@@ -739,10 +738,8 @@ a:hover img {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: auto;
   padding: clamp(16px, 0.7273rem + 0.7273vw, 24px);
   background: transparent;
 }
@@ -776,7 +773,7 @@ a:hover img {
 }
 .contact-us main .randombox.contact .textContent .contact-form label {
   font-weight: bold;
-  color: var(--label-color, #000000);
+  color: var(--label-color, #000);
 }
 .contact-us main .randombox.contact .textContent .contact-form input,
 .contact-us main .randombox.contact .textContent .contact-form textarea {
@@ -784,11 +781,9 @@ a:hover img {
   border: 1px solid var(--border-color, #444);
   border-radius: clamp(4px, 0.1591rem + 0.3636vw, 8px);
   font-family: var(--font-mono);
-  outline: none;
-  width: 100%;
   background: hsl(0, 0%, 20%);
-  color: #ffffff;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  color: #fff;
+  outline: none;
 }
 .contact-us main .randombox.contact .textContent .contact-form input:focus,
 .contact-us main .randombox.contact .textContent .contact-form textarea:focus {
@@ -797,21 +792,17 @@ a:hover img {
 }
 .contact-us main .randombox.contact .textContent .contact-form textarea {
   resize: vertical;
-  min-height: auto;
 }
 .contact-us main .randombox.contact .textContent .contact-form button {
   padding: clamp(8px, 0.3636rem + 0.7273vw, 16px) clamp(16px, 0.7273rem + 1.4545vw, 28px);
   background: hsl(210, 100%, 50%);
-  color: white;
+  color: #fff;
   font-weight: bold;
   border: none;
   border-radius: clamp(4px, 0.1591rem + 0.3636vw, 8px);
   cursor: pointer;
-  transition: filter 0.3s ease, background 0.3s ease;
-  box-shadow: 0 clamp(2px, 0.0795rem + 0.1818vw, 4px) clamp(4px, 0.1591rem + 0.3636vw, 8px) rgba(0, 0, 0, 0.4);
 }
 .contact-us main .randombox.contact .textContent .contact-form button:hover {
-  filter: brightness(1.05);
   background: hsl(210, 100%, 40%);
 }
 .contact-us .emailaddresses {
