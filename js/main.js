@@ -33,6 +33,30 @@ document.addEventListener("DOMContentLoaded", () => {
       currentSubmenu?.classList.toggle("active");
     });
   });
+  // ===== Search expand toggle =====
+const searchBar = document.querySelector(".searchbar");
+
+searchBar?.addEventListener("click", () => {
+  searchBar.classList.add("active");
+});
+
+// ===== Sidebar Search Filter =====
+const searchInput = document.querySelector(".searchbar input");
+const menuItems = document.querySelectorAll(".mainmenu > li");
+
+searchInput?.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+
+  menuItems.forEach(item => {
+    const text = item.innerText.toLowerCase();
+
+    if (text.includes(value)) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
 
   // ===== Popup message helper =====
   const showMessage = (text, success = true) => {
